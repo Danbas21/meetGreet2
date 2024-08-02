@@ -28,10 +28,10 @@ class MyApp extends StatelessWidget {
             width: width,
             height: height *
                 (av == 1.0
-                    ? 3
+                    ? 2.3
                     : av == .65
                         ? 3
-                        : 2),
+                        : 2.63),
             child: Stack(
               children: [
                 Positioned(
@@ -41,28 +41,41 @@ class MyApp extends StatelessWidget {
                   bottom: 0,
                   child: SizedBox(
                     width: width,
-                    height: height / 1.5,
-                    child: const HomePage(),
+                    height: height /
+                        (av == 1.0
+                            ? 2.3
+                            : av == .65
+                                ? 3
+                                : 2.63),
+                    child: InteractiveViewer(
+                        boundaryMargin: const EdgeInsets.all(100),
+                        minScale: 0.1,
+                        maxScale: 1.6,
+                        child: const HomePage()),
                   ),
                 ),
                 Positioned(
                     top: height /
                         (av == 1.0
-                            ? 1
+                            ? 1.7
                             : av == .65
                                 ? .80
-                                : .99),
+                                : 1.09),
                     left: 0,
                     right: 0,
                     bottom: 0,
                     child: SizedBox(
                         width: width,
                         height: height / 1.5,
-                        child: const LandingPage2())),
+                        child: InteractiveViewer(
+                            boundaryMargin: const EdgeInsets.all(100),
+                            minScale: 0.1,
+                            maxScale: 1.6,
+                            child: const LandingPage2()))),
                 Positioned(
                   top: height /
                       (av == 1.0
-                          ? .53
+                          ? .74
                           : av == .65
                               ? .5
                               : .7),
@@ -71,8 +84,12 @@ class MyApp extends StatelessWidget {
                   bottom: 0,
                   child: SizedBox(
                     width: width,
-                    height: height / 1.2,
-                    child: LadingPage3(),
+                    height: height / .5,
+                    child: InteractiveViewer(
+                        boundaryMargin: const EdgeInsets.all(100),
+                        minScale: 0.1,
+                        maxScale: 1.6,
+                        child: const LadingPage3()),
                   ),
                 ),
               ],

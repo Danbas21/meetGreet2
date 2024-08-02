@@ -14,192 +14,197 @@ class Terminos extends StatelessWidget {
     double multiplier = ResponsiveUtil.getMultiplier(context);
 
     return Scaffold(
-      body: SizedBox(
-        width: width,
-        height: height,
-        child: Stack(children: [
-          const Positioned(
-            left: -200,
-            bottom: 1000,
-            child: SizedBox(
-              width: 800,
-              height: 800,
-              child: Circumference(
-                widthC: 700,
-                heightC: 645.04,
-                opacity: 100,
+      body: InteractiveViewer(
+        boundaryMargin: const EdgeInsets.all(100),
+        minScale: 0.1,
+        maxScale: 1.6,
+        child: SizedBox(
+          width: width,
+          height: height,
+          child: Stack(children: [
+            const Positioned(
+              left: -200,
+              bottom: 1000,
+              child: SizedBox(
+                width: 800,
+                height: 800,
+                child: Circumference(
+                  widthC: 700,
+                  heightC: 645.04,
+                  opacity: 100,
+                ),
               ),
             ),
-          ),
-          const Positioned(
-            right: 90,
-            bottom: 1000,
-            child: SizedBox(
-              width: 145,
-              height: 80,
-              child: CirculosEnGrid(),
-            ),
-          ),
-          const Positioned(
-            left: -200,
-            bottom: 1100,
-            child: SizedBox(
-              width: 600,
-              height: 600,
-              child: Circumference3(
-                widthC: 700,
-                heightC: 645.04,
-                opacity: 225,
+            const Positioned(
+              right: 90,
+              bottom: 1000,
+              child: SizedBox(
+                width: 145,
+                height: 80,
+                child: CirculosEnGrid(),
               ),
             ),
-          ),
-          const Positioned(
-            right: -250,
-            top: 1000,
-            child: SizedBox(
-              width: 800,
-              height: 800,
-              child: Circumference(
-                widthC: 700,
-                heightC: 645.04,
-                opacity: 100,
+            const Positioned(
+              left: -200,
+              bottom: 1100,
+              child: SizedBox(
+                width: 600,
+                height: 600,
+                child: Circumference3(
+                  widthC: 700,
+                  heightC: 645.04,
+                  opacity: 225,
+                ),
               ),
             ),
-          ),
-          const Positioned(
-            left: 90,
-            top: 950,
-            child: SizedBox(
-              width: 145,
-              height: 80,
-              child: CirculosEnGrid(),
-            ),
-          ),
-          const Positioned(
-            right: -300,
-            top: 1100,
-            child: SizedBox(
-              width: 600,
-              height: 600,
-              child: Circumference3(
-                widthC: 700,
-                heightC: 645.04,
-                opacity: 225,
+            const Positioned(
+              right: -250,
+              top: 1000,
+              child: SizedBox(
+                width: 800,
+                height: 800,
+                child: Circumference(
+                  widthC: 700,
+                  heightC: 645.04,
+                  opacity: 100,
+                ),
               ),
             ),
-          ),
-          const Positioned(
-            left: -200,
-            top: -250,
-            child: SizedBox(
-              width: 800,
-              height: 800,
-              child: Circumference(
-                widthC: 700,
-                heightC: 645.04,
-                opacity: 100,
+            const Positioned(
+              left: 90,
+              top: 950,
+              child: SizedBox(
+                width: 145,
+                height: 80,
+                child: CirculosEnGrid(),
               ),
             ),
-          ),
-          const Positioned(
-            right: 90,
-            top: 290,
-            child: SizedBox(
-              width: 145,
-              height: 80,
-              child: CirculosEnGrid(),
-            ),
-          ),
-          const Positioned(
-            left: -200,
-            top: -270,
-            child: SizedBox(
-              width: 600,
-              height: 600,
-              child: Circumference3(
-                widthC: 700,
-                heightC: 645.04,
-                opacity: 225,
+            const Positioned(
+              right: -300,
+              top: 1100,
+              child: SizedBox(
+                width: 600,
+                height: 600,
+                child: Circumference3(
+                  widthC: 700,
+                  heightC: 645.04,
+                  opacity: 225,
+                ),
               ),
             ),
-          ),
-          const Positioned(
-            right: -200,
-            bottom: -250,
-            child: SizedBox(
-              width: 800,
-              height: 800,
-              child: Circumference(
-                widthC: 700,
-                heightC: 645.04,
-                opacity: 100,
+            const Positioned(
+              left: -200,
+              top: -250,
+              child: SizedBox(
+                width: 800,
+                height: 800,
+                child: Circumference(
+                  widthC: 700,
+                  heightC: 645.04,
+                  opacity: 100,
+                ),
               ),
             ),
-          ),
-          const Positioned(
-            left: 90,
-            bottom: 290,
-            child: SizedBox(
-              width: 145,
-              height: 80,
-              child: CirculosEnGrid(),
-            ),
-          ),
-          const Positioned(
-            right: -200,
-            bottom: -270,
-            child: SizedBox(
-              width: 600,
-              height: 600,
-              child: Circumference3(
-                widthC: 700,
-                heightC: 645.04,
-                opacity: 225,
+            const Positioned(
+              right: 90,
+              top: 290,
+              child: SizedBox(
+                width: 145,
+                height: 80,
+                child: CirculosEnGrid(),
               ),
             ),
-          ),
-          Positioned(
-            child: ListView.builder(
-              itemCount: terms.length,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(top: 120.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        terms[index]['header']!,
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
+            const Positioned(
+              left: -200,
+              top: -270,
+              child: SizedBox(
+                width: 600,
+                height: 600,
+                child: Circumference3(
+                  widthC: 700,
+                  heightC: 645.04,
+                  opacity: 225,
+                ),
+              ),
+            ),
+            const Positioned(
+              right: -200,
+              bottom: -250,
+              child: SizedBox(
+                width: 800,
+                height: 800,
+                child: Circumference(
+                  widthC: 700,
+                  heightC: 645.04,
+                  opacity: 100,
+                ),
+              ),
+            ),
+            const Positioned(
+              left: 90,
+              bottom: 290,
+              child: SizedBox(
+                width: 145,
+                height: 80,
+                child: CirculosEnGrid(),
+              ),
+            ),
+            const Positioned(
+              right: -200,
+              bottom: -270,
+              child: SizedBox(
+                width: 600,
+                height: 600,
+                child: Circumference3(
+                  widthC: 700,
+                  heightC: 645.04,
+                  opacity: 225,
+                ),
+              ),
+            ),
+            Positioned(
+              child: ListView.builder(
+                itemCount: terms.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(top: 120.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          terms[index]['header']!,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 4),
-                      Container(
-                        alignment: Alignment.center,
-                        margin: const EdgeInsets.symmetric(horizontal: 20),
-                        padding: const EdgeInsets.all(20),
-                        width: 900,
-                        child: Text(terms[index]['paragraph']!,
-                            style: const TextStyle(fontSize: 16),
-                            textAlign: TextAlign.justify),
-                      )
-                    ],
-                  ),
-                );
-              },
+                        const SizedBox(height: 4),
+                        Container(
+                          alignment: Alignment.center,
+                          margin: const EdgeInsets.symmetric(horizontal: 20),
+                          padding: const EdgeInsets.all(20),
+                          width: 900,
+                          child: Text(terms[index]['paragraph']!,
+                              style: const TextStyle(fontSize: 16),
+                              textAlign: TextAlign.justify),
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
             ),
-          ),
-          Positioned(
-            right: 50 * multiplier,
-            top: 0 * multiplier,
-            child: SizedBox(
-              width: 900 * multiplier,
-              height: 70 * multiplier,
-              child: const BarNaviv(),
+            Positioned(
+              right: 50 * multiplier,
+              top: 0 * multiplier,
+              child: SizedBox(
+                width: 900 * multiplier,
+                height: 70 * multiplier,
+                child: const BarNaviv(),
+              ),
             ),
-          ),
-        ]),
+          ]),
+        ),
       ),
     );
   }

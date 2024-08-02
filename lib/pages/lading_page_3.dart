@@ -24,17 +24,35 @@ class LadingPage3 extends StatelessWidget {
               top: 0,
               child: SizedBox(
                 width: width,
-                height: height /
-                    (av == 1.0
-                        ? .5
-                        : av == .65
-                            ? 0.75
-                            : 1),
+                height: height * 1.3,
                 child: Stack(
                   children: [
                     Positioned(
-                      left: -width / 4,
-                      bottom: -height / 3,
+                      left: width / 10,
+                      top: height /
+                          (av == 1.0
+                              ? 1.5
+                              : av == .65
+                                  ? 1.5
+                                  : 1.5),
+                      child: SizedBox(
+                        width: width / 1.7,
+                        height: height / 1.2,
+                        child: const Circumference(
+                          widthC: 900,
+                          heightC: 900,
+                          opacity: 100,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: width / 4,
+                      bottom: height /
+                          (av == 1.0
+                              ? 4
+                              : av == .65
+                                  ? 4
+                                  : 5),
                       child: SizedBox(
                         width: width / 1.7,
                         height: height / 1.2,
@@ -51,13 +69,13 @@ class LadingPage3 extends StatelessWidget {
                               ? 12
                               : av == .65
                                   ? 20
-                                  : 7),
+                                  : 15),
                       top: height /
                           (av == 1.0
-                              ? 12
+                              ? 1.3
                               : av == .65
                                   ? 10
-                                  : 16),
+                                  : 4),
                       child: SizedBox(
                         width: width /
                             (av == 1.0
@@ -75,13 +93,13 @@ class LadingPage3 extends StatelessWidget {
                               ? 12
                               : av == .65
                                   ? 20
-                                  : 7),
+                                  : 5),
                       top: height /
                           (av == 1.0
                               ? 12
                               : av == .65
                                   ? 10
-                                  : 16),
+                                  : 8),
                       child: SizedBox(
                         width: width /
                             (av == 1.0
@@ -94,62 +112,63 @@ class LadingPage3 extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      left: 0,
-                      top: 200,
+                      left: width /
+                          (av == 1.0
+                              ? 12
+                              : av == .65
+                                  ? 20
+                                  : 20),
+                      top: height /
+                          (av == 1.0
+                              ? 8
+                              : av == .65
+                                  ? 10
+                                  : 16),
                       child: SizedBox(
                           width: width,
-                          height: height,
+                          height: height * 1.4,
                           child: Stack(
                             children: [
                               Positioned(
-                                top: 10,
-                                left: 0,
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      width: width / 2.5,
-                                      height: height,
-                                      child: HoverContainer(
-                                        child: Column(
-                                          children: [
-                                            Image.asset(
-                                              'assets/images/rectangle_6.png',
-                                              fit: BoxFit.fill,
-                                            ),
-                                            Text(
-                                              'PRÓXIMOS EVENTOS',
-                                              style: TextStyle(
-                                                color: Colors.black,
-                                                fontSize: width / 60,
-                                                fontFamily: 'Roboto',
-                                                fontWeight: FontWeight.w700,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Positioned(
-                                top: 10,
-                                left: width / 2,
+                                top: height /
+                                    (av == 1.0
+                                        ? 100
+                                        : av == .65
+                                            ? 150
+                                            : 6),
+                                left: -width /
+                                    (av == 1.0
+                                        ? 3
+                                        : av == .65
+                                            ? 10
+                                            : 10),
                                 child: SizedBox(
-                                  width: width / 2.5,
+                                  width: width,
                                   height: height,
                                   child: HoverContainer(
                                     child: Column(
                                       children: [
                                         Image.asset(
-                                          'assets/images/rectangle_20.jpeg',
+                                          'assets/images/rectangle_6.png',
                                           fit: BoxFit.fill,
+                                          width: width /
+                                              (av == 1.0
+                                                  ? 3
+                                                  : av == .65
+                                                      ? 3
+                                                      : 1.15),
+                                          height: height / 4,
                                         ),
                                         Text(
-                                          'MEET AND GREET',
+                                          'PRÓXIMOS EVENTOS',
                                           style: TextStyle(
                                             color: Colors.black,
-                                            fontSize: width / 50,
+                                            fontSize: width /
+                                                (av == 1.0
+                                                    ? 40
+                                                    : av == .65
+                                                        ? 20
+                                                        : 20),
                                             fontFamily: 'Roboto',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -159,24 +178,155 @@ class LadingPage3 extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              // Positioned(
-                              //   top: 0,
-                              //   left: 0,
-                              //   child: SizedBox(
-                              //     width: width / 50,
-                              //     height: height / 2,
-                              //     child: HoverContainer(
-                              //       child: Column(
-                              //         children: [
-                              //           Image.asset(
-                              //             'assets/images/rectangle_6.png',
-                              //             fit: BoxFit.fill,
-                              //           ),
-                              //         ],
-                              //       ),
-                              //     ),
-                              //   ),
-                              // ),
+                              Positioned(
+                                top: height /
+                                    (av == 1.0
+                                        ? 20
+                                        : av == .65
+                                            ? 3.2
+                                            : 2),
+                                left: -width /
+                                    (av == 1.0
+                                        ? -15
+                                        : av == .65
+                                            ? 12
+                                            : 12),
+                                child: SizedBox(
+                                  width: width,
+                                  height: height,
+                                  child: HoverContainer(
+                                    child: Column(
+                                      children: [
+                                        Image.asset(
+                                          'assets/images/rectangle_20.jpeg',
+                                          fit: BoxFit.fill,
+                                          width: width /
+                                              (av == 1.0
+                                                  ? 3
+                                                  : av == .65
+                                                      ? 3
+                                                      : 1.15),
+                                          height: height / 4,
+                                        ),
+                                        Text(
+                                          'MEET AND GREET',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: width /
+                                                (av == 1.0
+                                                    ? 40
+                                                    : av == .65
+                                                        ? 20
+                                                        : 20),
+                                            fontFamily: 'Roboto',
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: height /
+                                    (av == 1.0
+                                        ? 2.5
+                                        : av == .65
+                                            ? 1.65
+                                            : 1.2),
+                                right: -width /
+                                    (av == 1.0
+                                        ? 2.5
+                                        : av == .65
+                                            ? 10
+                                            : 10),
+                                child: SizedBox(
+                                  width: width / (av == 1.0 ? .9 : 1),
+                                  height: height,
+                                  child: HoverContainer(
+                                    child: Stack(
+                                      children: [
+                                        Positioned(
+                                          left: 0,
+                                          top: 0,
+                                          child: SizedBox(
+                                            width: width / (av == 1.0 ? 5 : 2),
+                                            height: height / 4,
+                                            child: Image.asset(
+                                              'assets/images/rectangle_3.png',
+                                              fit: BoxFit.fill,
+                                              width: width /
+                                                  (av == 1.0
+                                                      ? 3
+                                                      : av == .65
+                                                          ? 3
+                                                          : 1.15),
+                                              height: height / 3,
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          left: width / 8,
+                                          top: height / 20,
+                                          child: SizedBox(
+                                            width: width / (av == 1.0 ? 5 : 2),
+                                            height: height / 4,
+                                            child: Image.asset(
+                                              'assets/images/rectangle_4.png',
+                                              fit: BoxFit.fill,
+                                              width: width / 2,
+                                              height: height / 3,
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          left: -10,
+                                          top: 10,
+                                          child: SizedBox(
+                                            width: width / (av == 1.0 ? 5 : 2),
+                                            height: height / 4,
+                                            child: Image.asset(
+                                              'assets/images/e9b4486e5cb972cdb482690080dfcd70.png',
+                                              fit: BoxFit.fill,
+                                              width: width /
+                                                  (av == 1.0 ? 5 : 1.15),
+                                              height: height / 3,
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          left: -width /
+                                              (av == 1.0
+                                                  ? -90
+                                                  : av == .65
+                                                      ? 10
+                                                      : -15),
+                                          top: height /
+                                              (av == 1.0
+                                                  ? 3.9
+                                                  : av == .65
+                                                      ? 3.9
+                                                      : 3.7),
+                                          child: Text(
+                                            'ARTÍCULOS COLECCIONABLES',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: width /
+                                                  (av == 1.0
+                                                      ? 60
+                                                      : av == .65
+                                                          ? 20
+                                                          : 30),
+                                              fontFamily: 'Roboto',
+                                              fontWeight: FontWeight.w700,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ],
                           )),
                     ),
@@ -196,217 +346,3 @@ final List<String> listWidget = [
   'assets/images/rectangle_4.png',
   'assets/images/rectangle_3.png',
 ];
-
-class Photos4 extends StatelessWidget {
-  const Photos4({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
-    double av = ResponsiveUtil.getMultiplier(context);
-
-    double fontSize = av == 1.0
-        ? 1
-        : av == 0.7
-            ? 1.8
-            : 3;
-
-    return SizedBox(
-      width: width,
-      height: height,
-      child: Stack(
-        children: [
-          Positioned(
-            left: av == 1.0
-                ? 40
-                : av == 0.65
-                    ? 200
-                    : 0,
-            bottom: 0,
-            child: SizedBox(
-              width: width,
-              height: height / 8,
-              child: Text(
-                'MEET AND GREET',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: (50 / fontSize),
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            left: 0,
-            top: 0,
-            child: SizedBox(
-              width: width,
-              height: height / 3.8,
-              child: Image.asset('assets/images/rectangle_20.jpeg',
-                  fit: BoxFit.contain),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Photos1 extends StatelessWidget {
-  const Photos1({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double av = ResponsiveUtil.getMultiplier(context);
-    double widthContainer = av == 1.0
-        ? 1900
-        : av == .70
-            ? 970
-            : width;
-    double heightContainer = av == 1.0
-        ? 700
-        : av == .70
-            ? 350
-            : 200;
-
-    double heightMultiplier = av == 1.0 ? 1.3 : 2;
-    double divisor = av == 1.0 ? 3.5 : 1.4;
-    double fontSize = av == 1.0
-        ? 1
-        : av == 0.7
-            ? 1.8
-            : 3;
-
-    return SizedBox(
-      width: widthContainer / divisor,
-      height: heightContainer * heightMultiplier,
-      child: Stack(children: [
-        Positioned(
-          left: av == 1.0
-              ? 40
-              : av == 0.7
-                  ? 200
-                  : 70,
-          bottom: 0,
-          child: SizedBox(
-            width: widthContainer,
-            height: 100,
-            child: Text(
-              'PRÓXIMOS EVENTOS',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: (50 / fontSize),
-                fontFamily: 'Roboto',
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ),
-        ),
-        Positioned(
-            left: 0 * av,
-            top: 0 * av,
-            child: SizedBox(
-              width: widthContainer / divisor,
-              height: heightContainer,
-              child: Image.asset('assets/images/rectangle_6.png'),
-            ))
-      ]),
-    );
-  }
-}
-
-class Photos2 extends StatelessWidget {
-  const Photos2({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double av = ResponsiveUtil.getMultiplier(context);
-    double widthContainer = av == 1.0
-        ? 1900
-        : av == .70
-            ? 970
-            : width;
-    double heightContainer = av == 1.0
-        ? 700
-        : av == .70
-            ? 350
-            : 200;
-
-    double heightMultiplier = av == 1.0 ? 1.3 : 1.9;
-    double divisor = av == 1.0 ? 2 : 1.3;
-    double fontSize = av == 1.0
-        ? 1
-        : av == 0.7
-            ? 1.8
-            : 3;
-
-    return SizedBox(
-      width: widthContainer / divisor,
-      height: heightContainer * heightMultiplier,
-      child: Stack(
-        children: [
-          Positioned(
-            left: 60,
-            top: -10,
-            child: SizedBox(
-              width: widthContainer / divisor,
-              height: heightContainer,
-              child: Image.asset('assets/images/rectangle_3.png'),
-            ),
-          ),
-          Positioned(
-            right: 40,
-            top: 15,
-            child: SizedBox(
-              width: widthContainer / divisor,
-              height: heightContainer,
-              child: Image.asset('assets/images/rectangle_4.png'),
-            ),
-          ),
-          Positioned(
-            left: 80,
-            top: av == .45 ? -19 : 10,
-            child: SizedBox(
-              width: widthContainer / divisor,
-              height: heightContainer * 1.3,
-              child: Image.asset(
-                'assets/images/e9b4486e5cb972cdb482690080dfcd70.png',
-              ),
-            ),
-          ),
-          Positioned(
-            left: av == 1.0
-                ? 40
-                : av == 0.7
-                    ? 200
-                    : 50,
-            bottom: 5,
-            child: SizedBox(
-              width: widthContainer,
-              height: 100,
-              child: Text(
-                'ARTÍCULOS COLECCIONABLES',
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                  fontStyle: FontStyle.italic,
-                  background: Paint()
-                    ..color = const Color.fromARGB(99, 234, 241, 242),
-                  color: Colors.black,
-                  fontSize: (50 / fontSize),
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}

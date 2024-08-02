@@ -16,18 +16,13 @@ class LandingPage2 extends StatelessWidget {
     double spaceElement = av == 1.0
         ? 8.2
         : av == .65
-            ? 4.0
-            : 4.3;
+            ? 5.6
+            : 4.1;
 
-    double fontSize = av == 1.0
-        ? 1.5
-        : av == 0.65
-            ? 1.85
-            : 2.3;
     double variant = av == 1.0
         ? 8.5
         : av == .65
-            ? 4.4
+            ? 6
             : 4.5;
 
     return SizedBox(
@@ -45,7 +40,12 @@ class LandingPage2 extends StatelessWidget {
                 children: [
                   Positioned(
                     left: width / 2,
-                    bottom: height / 8,
+                    bottom: height /
+                        (av == 1.0
+                            ? -5
+                            : av == .65
+                                ? 25
+                                : 20),
                     child: SizedBox(
                       width: width / 1.7,
                       height: height / 1.2,
@@ -61,14 +61,14 @@ class LandingPage2 extends StatelessWidget {
                         (av == 1.0
                             ? 7
                             : av == .65
-                                ? 20
-                                : 7),
+                                ? 40
+                                : 20),
                     top: height /
                         (av == 1.0
                             ? 5
                             : av == .65
                                 ? 10
-                                : 12),
+                                : 15),
                     child: SizedBox(
                       width: width /
                           (av == 1.0
@@ -85,15 +85,19 @@ class LandingPage2 extends StatelessWidget {
                         (av == 1.0
                             ? 110
                             : av == .65
-                                ? 3.5
-                                : 7),
+                                ? 90
+                                : -20),
                     left: av == 1.0
                         ? 25
                         : av == .65
                             ? 10
                             : null,
                     child: SizedBox(
-                      width: av == 1.0 ? width / 2 : width,
+                      width: av == .45
+                          ? width
+                          : av == .65
+                              ? width / 1.43
+                              : width / 2,
                       height: height * 1.1,
                       child: Stack(
                         children: [
@@ -150,62 +154,65 @@ class LandingPage2 extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    left: 15,
-                    top: 15,
-                    child: SizedBox(
-                      width: 950 * av,
-                      height: 370 * av,
-                      child: Text(
-                        'VENTA DE BOLETOS',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: (89 / fontSize),
-                          fontFamily: 'Arial',
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    top: height /
+                    bottom: height /
                         (av == 1.0
-                            ? 2.5
+                            ? -4
                             : av == .65
-                                ? 1.20
-                                : 120),
+                                ? -30
+                                : 8),
                     left: width /
-                        (av == .45
-                            ? 1
+                        (av == 1.0
+                            ? 2
                             : av == .65
-                                ? -10
-                                : 1.7),
+                                ? 2.3
+                                : 10),
                     child: SizedBox(
                       width: width,
-                      height: height,
+                      height: height / 1.2,
                       child: Stack(
                         children: [
                           Positioned(
-                            left: width / 25,
-                            top: 0,
+                            left: width /
+                                (av == 1.0
+                                    ? 6
+                                    : av == .65
+                                        ? 6
+                                        : 5),
+                            top: height /
+                                (av == 1.0
+                                    ? 18
+                                    : av == .65
+                                        ? 20
+                                        : 10),
                             child: SizedBox(
                               width: width,
-                              height: height,
+                              height: height / 1.2,
                               child: Text(
                                 'Expo Reforma\nAv. Morelos 67, Juárez, Cuauhtémoc,\nC.P.06600 Ciudad de México, CDMX',
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: (width / 80),
+                                  fontSize: width /
+                                      (av == 1.0
+                                          ? 50
+                                          : av == .65
+                                              ? 45
+                                              : 35),
                                 ),
                               ),
                             ),
                           ),
                           Positioned(
-                            left: -width / 70,
-                            top: 0,
+                            right: width / 1.23,
+                            top: height /
+                                (av == 1.0
+                                    ? 19
+                                    : av == .65
+                                        ? 20
+                                        : 12),
                             child: SizedBox(
-                              width: 120,
-                              height: 120,
+                              width: width / 9,
+                              height: height / 9,
                               child: Image.asset(
                                 'assets/images/maps.png',
                               ),

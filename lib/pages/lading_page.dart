@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
               width: width,
               height: height /
                   (av == 1.0
-                      ? .5
+                      ? .6
                       : av == .65
                           ? 0.75
                           : 1),
@@ -78,7 +78,12 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    bottom: height / 1.2,
+                    bottom: height /
+                        (av == .45
+                            ? 12
+                            : av == .65
+                                ? 6
+                                : 1.2),
                     left: width /
                         (av == .45
                             ? 1.8
