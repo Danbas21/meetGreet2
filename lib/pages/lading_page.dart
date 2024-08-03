@@ -19,8 +19,8 @@ class HomePage extends StatelessWidget {
     double spaceElement = av == 1.0
         ? 8.2
         : av == .65
-            ? 4.0
-            : 4.3;
+            ? 5.2
+            : 4;
 
     double fontSize = av == 1.0
         ? 1.5
@@ -30,8 +30,8 @@ class HomePage extends StatelessWidget {
     double variant = av == 1.0
         ? 8.5
         : av == .65
-            ? 4.4
-            : 4.5;
+            ? 6
+            : 5;
 
     return SizedBox(
       width: width,
@@ -45,10 +45,10 @@ class HomePage extends StatelessWidget {
               width: width,
               height: height /
                   (av == 1.0
-                      ? .6
+                      ? .7
                       : av == .65
                           ? 0.75
-                          : 1),
+                          : 1.2),
               child: Stack(
                 children: [
                   Positioned(
@@ -80,10 +80,10 @@ class HomePage extends StatelessWidget {
                   Positioned(
                     bottom: height /
                         (av == .45
-                            ? 12
+                            ? 10
                             : av == .65
                                 ? 6
-                                : 1.2),
+                                : 3),
                     left: width /
                         (av == .45
                             ? 1.8
@@ -128,14 +128,14 @@ class HomePage extends StatelessWidget {
                               ? 11
                               : av == .65
                                   ? 6
-                                  : 3.2),
+                                  : 4),
                       height: height / 10,
                       child: const CirculosEnGrid(),
                     ),
                   ),
                   Positioned(
                     left: 0,
-                    top: av == .45 ? 30 : 20,
+                    top: av == .45 ? 50 : 20,
                     child: SizedBox(
                       width: av == .45
                           ? 170
@@ -171,28 +171,38 @@ class HomePage extends StatelessWidget {
                           ),
                           Positioned(
                             right: av == 1.0
-                                ? 170
+                                ? 150
                                 : av == .65
-                                    ? 45
+                                    ? 35
                                     : 25,
                             top: av == 1.0
-                                ? 60
+                                ? 65
                                 : av == .65
                                     ? 60
-                                    : 24,
+                                    : 25,
                             child: Column(
                               children: [
                                 Text(
                                   "MEET & GREET",
                                   style: TextStyle(
-                                    fontSize: (24 / fontSize),
+                                    fontSize: width /
+                                        (av == 1.0
+                                            ? 80
+                                            : av == .65
+                                                ? 80
+                                                : 50),
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
                                 Text(
                                   "EXPERIENCE 2024",
                                   style: TextStyle(
-                                    fontSize: (22 / fontSize),
+                                    fontSize: width /
+                                        (av == 1.0
+                                            ? 80
+                                            : av == .65
+                                                ? 80
+                                                : 50),
                                     fontWeight: FontWeight.w400,
                                   ),
                                 )
@@ -209,7 +219,7 @@ class HomePage extends StatelessWidget {
                             ? 4
                             : av == .65
                                 ? 6
-                                : 8),
+                                : 6),
                     left: 10,
                     child: SizedBox(
                       width: av == 1.0 ? width / 1.3 : width,
@@ -219,7 +229,7 @@ class HomePage extends StatelessWidget {
                           Positioned(
                             top: height /
                                 (av == 1.0
-                                    ? 15
+                                    ? 16
                                     : av == .65
                                         ? 15
                                         : 29),
@@ -230,7 +240,7 @@ class HomePage extends StatelessWidget {
                               child: AnimationMainText(
                                   img: "EXPO REFORMA,CDMX 26 - 27 OCTUBRE 2024",
                                   wiseAnimation: 4,
-                                  fontSized: width / (av == 1.0 ? 50 : 40),
+                                  fontSized: width / (av == 1.0 ? 50 : 50),
                                   fontWeight: FontWeight.w400,
                                   letterSpacing: 2 * av),
                             ),
@@ -238,7 +248,7 @@ class HomePage extends StatelessWidget {
                           Positioned(
                             top: height /
                                 (av == 1.0
-                                    ? 15
+                                    ? 13
                                     : av == .65
                                         ? 15
                                         : 29),
@@ -253,7 +263,7 @@ class HomePage extends StatelessWidget {
                                       (av == 1.0
                                           ? 15
                                           : av == .65
-                                              ? 10
+                                              ? 12
                                               : 8.5),
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 0),
@@ -262,7 +272,7 @@ class HomePage extends StatelessWidget {
                           Positioned(
                             top: height /
                                 (av == 1.0
-                                    ? 6
+                                    ? 5.5
                                     : av == .65
                                         ? 6.5
                                         : 9),
@@ -277,7 +287,7 @@ class HomePage extends StatelessWidget {
                                       (av == 1.0
                                           ? 15
                                           : av == .65
-                                              ? 13
+                                              ? 12
                                               : 8.5),
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 0),
@@ -288,7 +298,7 @@ class HomePage extends StatelessWidget {
                                 (av == 1.0
                                     ? 3.5
                                     : av == .65
-                                        ? 5
+                                        ? 4.1
                                         : 5.5),
                             left: 0,
                             child: Container(
@@ -302,7 +312,7 @@ class HomePage extends StatelessWidget {
                                       (av == 1.0
                                           ? 15
                                           : av == .65
-                                              ? 10
+                                              ? 12
                                               : 8.5),
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 0),
@@ -317,15 +327,19 @@ class HomePage extends StatelessWidget {
                         (av == 1.0
                             ? 110
                             : av == .65
-                                ? 3.5
-                                : 7),
+                                ? 3.8
+                                : 6.5),
                     right: av == 1.0
                         ? 25
                         : av == .65
                             ? 10
                             : null,
                     child: SizedBox(
-                      width: av == 1.0 ? width / 2 : width,
+                      width: av == 1.0
+                          ? width / 2
+                          : av == .65
+                              ? width / 1.3
+                              : width,
                       height: height * 1.1,
                       child: Padding(
                         padding: const EdgeInsets.all(15),
@@ -390,7 +404,7 @@ class HomePage extends StatelessWidget {
                             ? 12
                             : av == .65
                                 ? 20
-                                : 7),
+                                : -2),
                     bottom: height /
                         (av == 1.0
                             ? 2
@@ -403,16 +417,26 @@ class HomePage extends StatelessWidget {
                               ? 11
                               : av == .65
                                   ? 6
-                                  : 3.2),
+                                  : 4),
                       height: height / 10,
                       child: const CirculosEnGrid(),
                     ),
                   ),
                   Positioned(
-                    right: 0 * av,
-                    top: 0 * av,
+                    left: width /
+                        (av == 1.0
+                            ? 12
+                            : av == .65
+                                ? 20
+                                : -10),
+                    top: 0,
                     child: SizedBox(
-                      width: 850 * av,
+                      width: width /
+                          (av == 1.0
+                              ? 1.11
+                              : av == .65
+                                  ? 1.11
+                                  : .9),
                       height: 90 * av,
                       child: const BarNaviv(),
                     ),

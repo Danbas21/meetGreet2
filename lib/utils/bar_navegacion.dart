@@ -13,7 +13,11 @@ class BarNaviv extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     double multiplier = ResponsiveUtil.getMultiplier(context);
+    double av = ResponsiveUtil.getMultiplier(context);
+
     return AppBar(
       automaticallyImplyLeading: true,
       backgroundColor: WidgetStateColor.transparent,
@@ -23,21 +27,114 @@ class BarNaviv extends StatelessWidget {
           bottomRight: const Radius.circular(20) * multiplier,
         ),
       ),
-      elevation: 0.1,
+      elevation: 0.2,
       actions: <Widget>[
         TextButton(
           onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const Scaffold(
+                builder: (context) => const SellTicket(),
+              ),
+            );
+          },
+          child: Container(
+            width: width /
+                (multiplier == 1.0
+                    ? 15
+                    : multiplier == .65
+                        ? 7.5
+                        : 6),
+            height: height / 28,
+            decoration: BoxDecoration(
+              color: Colors.purple,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Padding(
+              padding: EdgeInsets.only(top: multiplier == .65 ? 3 : 8),
+              child: Text(
+                'BOLETOS',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: width /
+                      (multiplier == 1.0
+                          ? 90
+                          : multiplier == .65
+                              ? 40
+                              : 50),
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto',
+                ),
+              ),
+            ),
+          ),
+        ),
+        TextButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Scaffold(
                     body: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      HomePage(),
-                      LandingPage2(),
-                      LadingPage3(),
-                    ],
+                  child: SizedBox(
+                    width: width,
+                    height: height *
+                        (av == 1.0
+                            ? 3
+                            : av == .65
+                                ? 3
+                                : 2.7),
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          child: SizedBox(
+                            width: width,
+                            height: height /
+                                (av == 1.0
+                                    ? 2.4
+                                    : av == .65
+                                        ? 3
+                                        : 2.63),
+                            child: const HomePage(),
+                          ),
+                        ),
+                        Positioned(
+                            top: height /
+                                (av == 1.0
+                                    ? 1.02
+                                    : av == .65
+                                        ? .80
+                                        : 1.195),
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            child: SizedBox(
+                                width: width,
+                                height: height / 1.5,
+                                child: const LandingPage2())),
+                        Positioned(
+                          top: height /
+                              (av == 1.0
+                                  ? .55
+                                  : av == .65
+                                      ? .5
+                                      : .7),
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          child: SizedBox(
+                            width: width,
+                            height: height / .5,
+                            child: const LadingPage3(),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 )),
               ),
@@ -47,7 +144,12 @@ class BarNaviv extends StatelessWidget {
             'HOME',
             style: TextStyle(
               color: Colors.blueGrey,
-              fontSize: 20 * multiplier,
+              fontSize: width /
+                  (multiplier == 1.0
+                      ? 90
+                      : multiplier == .65
+                          ? 40
+                          : 35),
               fontWeight: FontWeight.bold,
               fontFamily: 'Roboto',
             ),
@@ -63,10 +165,15 @@ class BarNaviv extends StatelessWidget {
             );
           },
           child: Text(
-            '¿QUE ES?',
+            '¿QUÉ ES?',
             style: TextStyle(
               color: Colors.blueGrey,
-              fontSize: 20 * multiplier,
+              fontSize: width /
+                  (multiplier == 1.0
+                      ? 90
+                      : multiplier == .65
+                          ? 40
+                          : 35),
               fontWeight: FontWeight.bold,
               fontFamily: 'Roboto',
             ),
@@ -85,7 +192,12 @@ class BarNaviv extends StatelessWidget {
             'INVITADOS',
             style: TextStyle(
               color: Colors.blueGrey,
-              fontSize: 20 * multiplier,
+              fontSize: width /
+                  (multiplier == 1.0
+                      ? 90
+                      : multiplier == .65
+                          ? 40
+                          : 35),
               fontWeight: FontWeight.bold,
               fontFamily: 'Roboto',
             ),
@@ -104,26 +216,12 @@ class BarNaviv extends StatelessWidget {
             'HORARIOS',
             style: TextStyle(
               color: Colors.blueGrey,
-              fontSize: 20 * multiplier,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Roboto',
-            ),
-          ),
-        ),
-        TextButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const SellTicket(),
-              ),
-            );
-          },
-          child: Text(
-            'BOLETOS',
-            style: TextStyle(
-              color: Colors.blueGrey,
-              fontSize: 20 * multiplier,
+              fontSize: width /
+                  (multiplier == 1.0
+                      ? 90
+                      : multiplier == .65
+                          ? 40
+                          : 35),
               fontWeight: FontWeight.bold,
               fontFamily: 'Roboto',
             ),

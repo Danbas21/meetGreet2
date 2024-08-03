@@ -17,13 +17,13 @@ class LandingPage2 extends StatelessWidget {
         ? 8.2
         : av == .65
             ? 5.6
-            : 4.1;
+            : 5.2;
 
     double variant = av == 1.0
         ? 8.5
         : av == .65
             ? 6
-            : 4.5;
+            : 6;
 
     return SizedBox(
       width: width,
@@ -45,7 +45,7 @@ class LandingPage2 extends StatelessWidget {
                             ? -5
                             : av == .65
                                 ? 25
-                                : 20),
+                                : 2),
                     child: SizedBox(
                       width: width / 1.7,
                       height: height / 1.2,
@@ -75,7 +75,7 @@ class LandingPage2 extends StatelessWidget {
                               ? 11
                               : av == .65
                                   ? 6
-                                  : 3.2),
+                                  : 4),
                       height: height / 10,
                       child: const CirculosEnGrid(),
                     ),
@@ -86,15 +86,15 @@ class LandingPage2 extends StatelessWidget {
                             ? 110
                             : av == .65
                                 ? 90
-                                : -20),
+                                : 15),
                     left: av == 1.0
                         ? 25
                         : av == .65
                             ? 10
-                            : null,
+                            : 10,
                     child: SizedBox(
                       width: av == .45
-                          ? width
+                          ? width / 1.35
                           : av == .65
                               ? width / 1.43
                               : width / 2,
@@ -154,12 +154,38 @@ class LandingPage2 extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    bottom: height /
+                    top: height /
                         (av == 1.0
-                            ? -4
+                            ? 4
                             : av == .65
-                                ? -30
-                                : 8),
+                                ? 15
+                                : 7),
+                    left: width /
+                        (av == 1.0
+                            ? 1.8
+                            : av == .65
+                                ? 15
+                                : 5),
+                    child: Text(
+                      'UBICACIÓN',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: width /
+                            (av == 1.0
+                                ? 20
+                                : av == .65
+                                    ? 12
+                                    : 10),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: height /
+                        (av == 1.0
+                            ? 2
+                            : av == .65
+                                ? 13
+                                : 6),
                     left: width /
                         (av == 1.0
                             ? 2
@@ -176,13 +202,13 @@ class LandingPage2 extends StatelessWidget {
                                 (av == 1.0
                                     ? 6
                                     : av == .65
-                                        ? 6
+                                        ? 7
                                         : 5),
                             top: height /
                                 (av == 1.0
                                     ? 18
                                     : av == .65
-                                        ? 20
+                                        ? 10
                                         : 10),
                             child: SizedBox(
                               width: width,
@@ -196,19 +222,19 @@ class LandingPage2 extends StatelessWidget {
                                       (av == 1.0
                                           ? 50
                                           : av == .65
-                                              ? 45
+                                              ? 40
                                               : 35),
                                 ),
                               ),
                             ),
                           ),
                           Positioned(
-                            right: width / 1.23,
+                            right: width / 1.19,
                             top: height /
                                 (av == 1.0
                                     ? 19
                                     : av == .65
-                                        ? 20
+                                        ? 12
                                         : 12),
                             child: SizedBox(
                               width: width / 9,

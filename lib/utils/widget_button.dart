@@ -17,6 +17,8 @@ class ButtonMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double multiplier = ResponsiveUtil.getMultiplier(context);
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return SizedBox(
       width: widthB,
       height: heightB,
@@ -30,7 +32,7 @@ class ButtonMain extends StatelessWidget {
         icon: Icon(
           Icons.arrow_downward,
           color: Colors.white,
-          size: 14 * multiplier,
+          size: width / 22,
         ),
         label: Text(
           title,
@@ -44,7 +46,7 @@ class ButtonMain extends StatelessWidget {
           padding: EdgeInsets.symmetric(
               horizontal: 14 * multiplier, vertical: 10 * multiplier),
           textStyle: TextStyle(
-            fontSize: 14 * multiplier,
+            fontSize: width / 23,
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),

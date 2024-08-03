@@ -91,7 +91,6 @@ class RotatableImageCardState extends State<RotatableImageCard>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: _toggleCard,
       child: Stack(
         alignment: Alignment.center,
         children: [

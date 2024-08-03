@@ -82,7 +82,7 @@ class LadingPage3 extends StatelessWidget {
                                 ? 11
                                 : av == .65
                                     ? 6
-                                    : 3.2),
+                                    : 4),
                         height: height / 10,
                         child: const CirculosEnGrid(),
                       ),
@@ -106,7 +106,7 @@ class LadingPage3 extends StatelessWidget {
                                 ? 11
                                 : av == .65
                                     ? 6
-                                    : 3.2),
+                                    : 4),
                         height: height / 10,
                         child: const CirculosEnGrid(),
                       ),
@@ -114,7 +114,7 @@ class LadingPage3 extends StatelessWidget {
                     Positioned(
                       left: width /
                           (av == 1.0
-                              ? 12
+                              ? 10
                               : av == .65
                                   ? 20
                                   : 20),
@@ -122,7 +122,7 @@ class LadingPage3 extends StatelessWidget {
                           (av == 1.0
                               ? 8
                               : av == .65
-                                  ? 10
+                                  ? 7
                                   : 16),
                       child: SizedBox(
                           width: width,
@@ -132,18 +132,23 @@ class LadingPage3 extends StatelessWidget {
                               Positioned(
                                 top: height /
                                     (av == 1.0
-                                        ? 100
+                                        ? 4
                                         : av == .65
-                                            ? 150
+                                            ? 90
                                             : 6),
-                                left: -width /
+                                left: width /
                                     (av == 1.0
-                                        ? 3
+                                        ? 20
                                         : av == .65
-                                            ? 10
-                                            : 10),
+                                            ? 2.5
+                                            : -30),
                                 child: SizedBox(
-                                  width: width,
+                                  width: width /
+                                      (av == 1.0
+                                          ? 3.5
+                                          : av == .65
+                                              ? 3
+                                              : 1.4),
                                   height: height,
                                   child: HoverContainer(
                                     child: Column(
@@ -153,7 +158,7 @@ class LadingPage3 extends StatelessWidget {
                                           fit: BoxFit.fill,
                                           width: width /
                                               (av == 1.0
-                                                  ? 3
+                                                  ? 3.5
                                                   : av == .65
                                                       ? 3
                                                       : 1.15),
@@ -165,10 +170,10 @@ class LadingPage3 extends StatelessWidget {
                                             color: Colors.black,
                                             fontSize: width /
                                                 (av == 1.0
-                                                    ? 40
+                                                    ? 50
                                                     : av == .65
-                                                        ? 20
-                                                        : 20),
+                                                        ? 40
+                                                        : 25),
                                             fontFamily: 'Roboto',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -181,18 +186,18 @@ class LadingPage3 extends StatelessWidget {
                               Positioned(
                                 top: height /
                                     (av == 1.0
-                                        ? 20
+                                        ? 2.5
                                         : av == .65
                                             ? 3.2
                                             : 2),
-                                left: -width /
+                                left: width /
                                     (av == 1.0
-                                        ? -15
+                                        ? 2.5
                                         : av == .65
-                                            ? 12
-                                            : 12),
+                                            ? -10
+                                            : 5),
                                 child: SizedBox(
-                                  width: width,
+                                  width: width / 2,
                                   height: height,
                                   child: HoverContainer(
                                     child: Column(
@@ -202,7 +207,7 @@ class LadingPage3 extends StatelessWidget {
                                           fit: BoxFit.fill,
                                           width: width /
                                               (av == 1.0
-                                                  ? 3
+                                                  ? 4
                                                   : av == .65
                                                       ? 3
                                                       : 1.15),
@@ -214,10 +219,10 @@ class LadingPage3 extends StatelessWidget {
                                             color: Colors.black,
                                             fontSize: width /
                                                 (av == 1.0
-                                                    ? 40
+                                                    ? 50
                                                     : av == .65
-                                                        ? 20
-                                                        : 20),
+                                                        ? 35
+                                                        : 25),
                                             fontFamily: 'Roboto',
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -230,18 +235,23 @@ class LadingPage3 extends StatelessWidget {
                               Positioned(
                                 top: height /
                                     (av == 1.0
-                                        ? 2.5
+                                        ? 1.5
                                         : av == .65
-                                            ? 1.65
+                                            ? 2
                                             : 1.2),
                                 right: -width /
                                     (av == 1.0
                                         ? 2.5
                                         : av == .65
-                                            ? 10
-                                            : 10),
+                                            ? 1.5
+                                            : 4),
                                 child: SizedBox(
-                                  width: width / (av == 1.0 ? .9 : 1),
+                                  width: width /
+                                      (av == 1.0
+                                          ? .9
+                                          : av == .65
+                                              ? .9
+                                              : .9),
                                   height: height,
                                   child: HoverContainer(
                                     child: Stack(
@@ -250,31 +260,46 @@ class LadingPage3 extends StatelessWidget {
                                           left: 0,
                                           top: 0,
                                           child: SizedBox(
-                                            width: width / (av == 1.0 ? 5 : 2),
+                                            width: width /
+                                                (av == 1.0
+                                                    ? 6
+                                                    : av == .65
+                                                        ? 5
+                                                        : 2),
                                             height: height / 4,
                                             child: Image.asset(
                                               'assets/images/rectangle_3.png',
                                               fit: BoxFit.fill,
                                               width: width /
                                                   (av == 1.0
-                                                      ? 3
+                                                      ? 3.5
                                                       : av == .65
-                                                          ? 3
+                                                          ? 1.3
                                                           : 1.15),
                                               height: height / 3,
                                             ),
                                           ),
                                         ),
                                         Positioned(
-                                          left: width / 8,
+                                          left: width / 10,
                                           top: height / 20,
                                           child: SizedBox(
-                                            width: width / (av == 1.0 ? 5 : 2),
+                                            width: width /
+                                                (av == 1.0
+                                                    ? 10
+                                                    : av == .65
+                                                        ? 6
+                                                        : 2),
                                             height: height / 4,
                                             child: Image.asset(
                                               'assets/images/rectangle_4.png',
                                               fit: BoxFit.fill,
-                                              width: width / 2,
+                                              width: width /
+                                                  (av == 1.0
+                                                      ? 10
+                                                      : av == .65
+                                                          ? 1.3
+                                                          : 1.15),
                                               height: height / 3,
                                             ),
                                           ),
@@ -283,7 +308,12 @@ class LadingPage3 extends StatelessWidget {
                                           left: -10,
                                           top: 10,
                                           child: SizedBox(
-                                            width: width / (av == 1.0 ? 5 : 2),
+                                            width: width /
+                                                (av == 1.0
+                                                    ? 5
+                                                    : av == .65
+                                                        ? 6
+                                                        : 2),
                                             height: height / 4,
                                             child: Image.asset(
                                               'assets/images/e9b4486e5cb972cdb482690080dfcd70.png',
@@ -299,13 +329,13 @@ class LadingPage3 extends StatelessWidget {
                                               (av == 1.0
                                                   ? -90
                                                   : av == .65
-                                                      ? 10
+                                                      ? -30
                                                       : -15),
                                           top: height /
                                               (av == 1.0
-                                                  ? 3.9
+                                                  ? 3.8
                                                   : av == .65
-                                                      ? 3.9
+                                                      ? 3.8
                                                       : 3.7),
                                           child: Text(
                                             'ARTÍCULOS COLECCIONABLES',
@@ -313,9 +343,9 @@ class LadingPage3 extends StatelessWidget {
                                               color: Colors.black,
                                               fontSize: width /
                                                   (av == 1.0
-                                                      ? 60
+                                                      ? 80
                                                       : av == .65
-                                                          ? 20
+                                                          ? 60
                                                           : 30),
                                               fontFamily: 'Roboto',
                                               fontWeight: FontWeight.w700,
