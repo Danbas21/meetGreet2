@@ -120,7 +120,7 @@ class LadingPage3 extends StatelessWidget {
                                   : 20),
                       top: height /
                           (av == 1.0
-                              ? 8
+                              ? 40
                               : av == .65
                                   ? 7
                                   : 16),
