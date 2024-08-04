@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
                     ? 3
                     : av == .65
                         ? 3
-                        : 2.7),
+                        : 2.9),
             child: Stack(
               children: [
                 Positioned(
@@ -87,7 +87,7 @@ class MyApp extends StatelessWidget {
                   bottom: 0,
                   child: SizedBox(
                     width: width,
-                    height: height / 6,
+                    height: height / 6.5,
                     child: Footer(),
                   ),
                 ),
