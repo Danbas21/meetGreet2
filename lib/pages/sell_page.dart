@@ -169,7 +169,7 @@ class SellTicket extends StatelessWidget {
                       ? 30
                       : 10,
               top: av == 1.0
-                  ? 250
+                  ? 220
                   : av == .65
                       ? 350
                       : 330,
@@ -194,7 +194,7 @@ class SellTicket extends StatelessWidget {
                       ? 30
                       : 10,
               top: av == 1.0
-                  ? 160
+                  ? 120
                   : av == .65
                       ? 50
                       : 45,
@@ -219,7 +219,7 @@ class SellTicket extends StatelessWidget {
                       ? 35
                       : 15,
               top: av == 1
-                  ? 420
+                  ? 400
                   : av == .65
                       ? 490
                       : 420,
@@ -232,7 +232,7 @@ class SellTicket extends StatelessWidget {
                   style: TextStyle(
                     fontSize: width /
                         (av == 1.0
-                            ? 60
+                            ? 70
                             : av == .65
                                 ? 45
                                 : 35),
@@ -279,7 +279,7 @@ class SellTicket extends StatelessWidget {
             Positioned(
               left: width /
                   (av == 1.0
-                      ? 2.8
+                      ? 2.1
                       : av == .65
                           ? 3.5
                           : -55),
@@ -311,7 +311,7 @@ class SellTicket extends StatelessWidget {
                       ? 80
                       : 100,
               bottom: av == 1.0
-                  ? 100
+                  ? 10
                   : av == .65
                       ? 50
                       : 50,

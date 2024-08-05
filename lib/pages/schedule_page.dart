@@ -124,15 +124,6 @@ class _SchedulePageState extends State<SchedulePage> {
               ),
             ),
             Positioned(
-              left: 90,
-              top: 950,
-              child: SizedBox(
-                width: 250 * multiplier,
-                height: 250 * multiplier,
-                child: const CirculosEnGrid(),
-              ),
-            ),
-            Positioned(
               right: -300,
               top: 1100,
               child: SizedBox(
@@ -156,15 +147,6 @@ class _SchedulePageState extends State<SchedulePage> {
                   heightC: 900 * multiplier,
                   opacity: 100,
                 ),
-              ),
-            ),
-            Positioned(
-              right: 90,
-              top: 290,
-              child: SizedBox(
-                width: 250 * multiplier,
-                height: 250 * multiplier,
-                child: CirculosEnGrid(),
               ),
             ),
             Positioned(

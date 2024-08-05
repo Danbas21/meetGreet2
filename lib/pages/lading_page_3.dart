@@ -141,7 +141,7 @@ class LadingPage3 extends StatelessWidget {
                                         ? 20
                                         : av == .65
                                             ? 2.5
-                                            : -30),
+                                            : 60),
                                 child: SizedBox(
                                   width: width /
                                       (av == 1.0
@@ -186,7 +186,7 @@ class LadingPage3 extends StatelessWidget {
                               Positioned(
                                 top: height /
                                     (av == 1.0
-                                        ? 2.5
+                                        ? 3
                                         : av == .65
                                             ? 3.2
                                             : 2),
@@ -195,7 +195,7 @@ class LadingPage3 extends StatelessWidget {
                                         ? 2.5
                                         : av == .65
                                             ? -10
-                                            : 5),
+                                            : 6),
                                 child: SizedBox(
                                   width: width / 2,
                                   height: height,
@@ -241,10 +241,10 @@ class LadingPage3 extends StatelessWidget {
                                             : 1.2),
                                 right: -width /
                                     (av == 1.0
-                                        ? 2.5
+                                        ? 2.6
                                         : av == .65
                                             ? 1.5
-                                            : 4),
+                                            : 7),
                                 child: SizedBox(
                                   width: width /
                                       (av == 1.0
@@ -257,7 +257,11 @@ class LadingPage3 extends StatelessWidget {
                                     child: Stack(
                                       children: [
                                         Positioned(
-                                          left: 0,
+                                          left: av == 1.0
+                                              ? 200
+                                              : av == .65
+                                                  ? 0
+                                                  : 100,
                                           top: 0,
                                           child: SizedBox(
                                             width: width /
@@ -265,7 +269,7 @@ class LadingPage3 extends StatelessWidget {
                                                     ? 6
                                                     : av == .65
                                                         ? 5
-                                                        : 2),
+                                                        : 2.5),
                                             height: height / 4,
                                             child: Image.asset(
                                               'assets/images/rectangle_3.png',
@@ -281,7 +285,12 @@ class LadingPage3 extends StatelessWidget {
                                           ),
                                         ),
                                         Positioned(
-                                          left: width / 10,
+                                          left: width /
+                                              (av == 1.0
+                                                  ? 5
+                                                  : av == .65
+                                                      ? 10
+                                                      : 10),
                                           top: height / 20,
                                           child: SizedBox(
                                             width: width /
@@ -289,7 +298,7 @@ class LadingPage3 extends StatelessWidget {
                                                     ? 10
                                                     : av == .65
                                                         ? 6
-                                                        : 2),
+                                                        : 4),
                                             height: height / 4,
                                             child: Image.asset(
                                               'assets/images/rectangle_4.png',
@@ -305,7 +314,11 @@ class LadingPage3 extends StatelessWidget {
                                           ),
                                         ),
                                         Positioned(
-                                          left: -10,
+                                          left: av == 1.0
+                                              ? 120
+                                              : av == .65
+                                                  ? 50
+                                                  : 50,
                                           top: 10,
                                           child: SizedBox(
                                             width: width /
@@ -325,12 +338,12 @@ class LadingPage3 extends StatelessWidget {
                                           ),
                                         ),
                                         Positioned(
-                                          left: -width /
+                                          left: width /
                                               (av == 1.0
-                                                  ? -90
+                                                  ? 40
                                                   : av == .65
-                                                      ? -30
-                                                      : -15),
+                                                      ? 30
+                                                      : 8),
                                           top: height /
                                               (av == 1.0
                                                   ? 3.8
@@ -343,10 +356,10 @@ class LadingPage3 extends StatelessWidget {
                                               color: Colors.black,
                                               fontSize: width /
                                                   (av == 1.0
-                                                      ? 80
+                                                      ? 50
                                                       : av == .65
-                                                          ? 60
-                                                          : 30),
+                                                          ? 50
+                                                          : 25),
                                               fontFamily: 'Roboto',
                                               fontWeight: FontWeight.w700,
                                             ),

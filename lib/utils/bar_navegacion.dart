@@ -51,7 +51,12 @@ class BarNaviv extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             child: Padding(
-              padding: EdgeInsets.only(top: multiplier == .65 ? 3 : 8),
+              padding: EdgeInsets.only(
+                  top: multiplier == .65
+                      ? 3
+                      : multiplier == 1.0
+                          ? 4.5
+                          : 8),
               child: Text(
                 'BOLETOS',
                 textAlign: TextAlign.center,
