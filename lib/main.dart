@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/footer_page.dart';
 import 'package:flutter_app/pages/lading_page.dart';
 import 'package:flutter_app/pages/lading_page_2.dart';
 import 'package:flutter_app/pages/lading_page_3.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
                     ? 3
                     : av == .65
                         ? 3
-                        : 2.7),
+                        : 2.9),
             child: Stack(
               children: [
                 Positioned(
@@ -78,6 +79,16 @@ class MyApp extends StatelessWidget {
                     width: width,
                     height: height / .5,
                     child: const LadingPage3(),
+                  ),
+                ),
+                Positioned(
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  child: SizedBox(
+                    width: width,
+                    height: height / 6.5,
+                    child: Footer(),
                   ),
                 ),
               ],

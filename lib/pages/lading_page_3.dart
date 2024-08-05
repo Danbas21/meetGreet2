@@ -120,7 +120,7 @@ class LadingPage3 extends StatelessWidget {
                                   : 20),
                       top: height /
                           (av == 1.0
-                              ? 8
+                              ? 40
                               : av == .65
                                   ? 7
                                   : 16),
@@ -237,7 +237,7 @@ class LadingPage3 extends StatelessWidget {
                                     (av == 1.0
                                         ? 1.5
                                         : av == .65
-                                            ? 2
+                                            ? 2.7
                                             : 1.2),
                                 right: -width /
                                     (av == 1.0
@@ -325,7 +325,7 @@ class LadingPage3 extends StatelessWidget {
                                                 (av == 1.0
                                                     ? 5
                                                     : av == .65
-                                                        ? 6
+                                                        ? 4
                                                         : 2),
                                             height: height / 4,
                                             child: Image.asset(
