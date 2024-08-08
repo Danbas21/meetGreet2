@@ -14,15 +14,15 @@ class LandingPage2 extends StatelessWidget {
     double av = ResponsiveUtil.getMultiplier(context);
 
     double spaceElement = av == 1.0
-        ? 8.2
+        ? 6.5
         : av == .65
-            ? 5.6
+            ? 5.7
             : 5.2;
 
     double variant = av == 1.0
-        ? 8.5
+        ? 7.5
         : av == .65
-            ? 6
+            ? 6.5
             : 6;
 
     return SizedBox(
@@ -83,21 +83,22 @@ class LandingPage2 extends StatelessWidget {
                   Positioned(
                     top: height /
                         (av == 1.0
-                            ? 110
+                            ? 8
                             : av == .65
                                 ? 90
                                 : 15),
-                    left: av == 1.0
-                        ? 25
-                        : av == .65
-                            ? 10
-                            : 10,
+                    left: width /
+                        (av == 1.0
+                            ? -200
+                            : av == .65
+                                ? 8
+                                : 10),
                     child: SizedBox(
                       width: av == .45
                           ? width / 1.35
                           : av == .65
-                              ? width / 1.43
-                              : width / 2,
+                              ? width / 1.5
+                              : width / 1.7,
                       height: height * 1.1,
                       child: Stack(
                         children: [
@@ -153,98 +154,61 @@ class LandingPage2 extends StatelessWidget {
                       ),
                     ),
                   ),
+                  // Positioned(
+                  //   top: height /
+                  //       (av == 1.0
+                  //           ? 4
+                  //           : av == .65
+                  //               ? 15
+                  //               : 7),
+                  //   left: width /
+                  //       (av == 1.0
+                  //           ? 1.8
+                  //           : av == .65
+                  //               ? 15
+                  //               : 5),
+                  //   child: Text(
+                  //     'UBICACIÓN',
+                  //     style: TextStyle(
+                  //       color: Colors.black,
+                  //       fontSize: width /
+                  //           (av == 1.0
+                  //               ? 20
+                  //               : av == .65
+                  //                   ? 12
+                  //                   : 10),
+                  //     ),
+                  //   ),
+                  // ),
                   Positioned(
                     top: height /
                         (av == 1.0
-                            ? 4
+                            ? -25
                             : av == .65
-                                ? 15
-                                : 7),
+                                ? -5
+                                : -5),
                     left: width /
                         (av == 1.0
-                            ? 1.8
+                            ? 2.4
                             : av == .65
-                                ? 15
-                                : 5),
-                    child: Text(
-                      'UBICACIÓN',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: width /
-                            (av == 1.0
-                                ? 20
-                                : av == .65
-                                    ? 12
-                                    : 10),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    top: height /
-                        (av == 1.0
-                            ? 2
-                            : av == .65
-                                ? 13
-                                : 6),
-                    left: width /
-                        (av == 1.0
-                            ? 2
-                            : av == .65
-                                ? 2.3
-                                : 10),
-                    child: SizedBox(
-                      width: width,
+                                ? 8
+                                : 15),
+                    child: Container(
+                      width: width /
+                          (av == 1.0
+                              ? 1.4
+                              : av == .65
+                                  ? 1.4
+                                  : 1.02),
                       height: height / 1.2,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: width /
-                                (av == 1.0
-                                    ? 6
-                                    : av == .65
-                                        ? 7
-                                        : 5),
-                            top: height /
-                                (av == 1.0
-                                    ? 18
-                                    : av == .65
-                                        ? 10
-                                        : 10),
-                            child: SizedBox(
-                              width: width,
-                              height: height / 1.2,
-                              child: Text(
-                                'Expo Reforma\nAv. Morelos 67, Juárez, Cuauhtémoc,\nC.P.06600 Ciudad de México, CDMX',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: width /
-                                      (av == 1.0
-                                          ? 50
-                                          : av == .65
-                                              ? 40
-                                              : 35),
-                                ),
-                              ),
-                            ),
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/images/maps.png',
                           ),
-                          Positioned(
-                            right: width / 1.19,
-                            top: height /
-                                (av == 1.0
-                                    ? 19
-                                    : av == .65
-                                        ? 12
-                                        : 12),
-                            child: SizedBox(
-                              width: width / 9,
-                              height: height / 9,
-                              child: Image.asset(
-                                'assets/images/maps.png',
-                              ),
-                            ),
-                          ),
-                        ],
+                          fit: BoxFit.contain,
+                          opacity: 0.5,
+                        ),
                       ),
                     ),
                   ),

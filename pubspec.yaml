@@ -9,6 +9,7 @@ environment:
 
 dependencies:
   auto_size_text: ^3.0.0
+  carousel_slider: ^4.2.1
   cupertino_icons: ^1.0.6
   firebase_analytics: ^11.1.0
   firebase_core: ^3.1.1
@@ -28,6 +29,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/images/banner/
     - assets/images/e9b4486e5cb972cdb482690080dfcd70.png
     - assets/images/horarios1.jpg
     - assets/images/horarios2.jpg
@@ -81,6 +83,6 @@ flutter:
     - assets/images/luchas/lucha5.jpg
     - assets/images/luchas/lucha6.jpg
     - assets/images/luchas/lucha7.jpg
-
+    - assets/images/rectangle_24.png
     - assets/images/horarios1.jpg
     - assets/images/horarios2.jpg

@@ -21,29 +21,7 @@ class _SchedulePageState extends State<SchedulePage> {
     double height = MediaQuery.of(context).size.height;
     double av = ResponsiveUtil.getMultiplier(context);
 
-    double widthContainer = multiplier == 1.0
-        ? 2000
-        : multiplier == .65
-            ? 900
-            : 350;
-    double heightContainer = multiplier == 1.0
-        ? 800
-        : multiplier == .65
-            ? 400
-            : 200;
-
-    double divisor = multiplier == 1.0
-        ? 6
-        : multiplier == .65
-            ? 8
-            : 10;
     double spaceElement = multiplier == 1.0 ? 1.8 : 1.4;
-
-    double fontSize = multiplier == 1.0
-        ? 1
-        : multiplier == 0.65
-            ? 1.8
-            : 3.86;
 
     void _showPopup(BuildContext context, String frontImage) {
       showDialog(
@@ -52,14 +30,18 @@ class _SchedulePageState extends State<SchedulePage> {
           return Dialog(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0)),
-            child: SizedBox(
-              width: 400,
-              height: 400,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
-                  frontImage,
-                  fit: BoxFit.contain,
+            child: InteractiveViewer(
+              boundaryMargin: const EdgeInsets.all(100),
+              minScale: 0.1,
+              child: SizedBox(
+                width: width,
+                height: height / 2.5,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(
+                    frontImage,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
@@ -79,11 +61,11 @@ class _SchedulePageState extends State<SchedulePage> {
               left: -200,
               bottom: 1000,
               child: SizedBox(
-                width: 800 * multiplier,
-                height: 800 * multiplier,
-                child: Circumference(
-                  widthC: 700 * multiplier,
-                  heightC: 646 * multiplier,
+                width: width / 1.7,
+                height: height / 1.2,
+                child: const Circumference(
+                  widthC: 900,
+                  heightC: 900,
                   opacity: 100,
                 ),
               ),
@@ -92,9 +74,14 @@ class _SchedulePageState extends State<SchedulePage> {
               right: 90,
               bottom: 1000,
               child: SizedBox(
-                width: 250 * multiplier,
-                height: 250 * multiplier,
-                child: CirculosEnGrid(),
+                width: width /
+                    (av == 1.0
+                        ? 11
+                        : av == .65
+                            ? 6
+                            : 4),
+                height: height / 10,
+                child: const CirculosEnGrid(),
               ),
             ),
             Positioned(
@@ -114,11 +101,11 @@ class _SchedulePageState extends State<SchedulePage> {
               right: -250,
               top: 1000,
               child: SizedBox(
-                width: 950 * multiplier,
-                height: 950 * multiplier,
-                child: Circumference(
-                  widthC: 900 * multiplier,
-                  heightC: 900 * multiplier,
+                width: width / 1.7,
+                height: height / 1.2,
+                child: const Circumference(
+                  widthC: 900,
+                  heightC: 900,
                   opacity: 100,
                 ),
               ),
@@ -127,11 +114,11 @@ class _SchedulePageState extends State<SchedulePage> {
               right: -300,
               top: 1100,
               child: SizedBox(
-                width: 950 * multiplier,
-                height: 950 * multiplier,
-                child: Circumference3(
-                  widthC: 900 * multiplier,
-                  heightC: 900 * multiplier,
+                width: width / 1.7,
+                height: height / 1.2,
+                child: const Circumference3(
+                  widthC: 900,
+                  heightC: 900,
                   opacity: 225,
                 ),
               ),
@@ -140,11 +127,11 @@ class _SchedulePageState extends State<SchedulePage> {
               left: -200,
               top: -250,
               child: SizedBox(
-                width: 950 * multiplier,
-                height: 950 * multiplier,
-                child: Circumference(
-                  widthC: 900 * multiplier,
-                  heightC: 900 * multiplier,
+                width: width / 1.7,
+                height: height / 1.2,
+                child: const Circumference(
+                  widthC: 900,
+                  heightC: 900,
                   opacity: 100,
                 ),
               ),
@@ -153,11 +140,11 @@ class _SchedulePageState extends State<SchedulePage> {
               left: -200,
               top: -270,
               child: SizedBox(
-                width: 950 * multiplier,
-                height: 950 * multiplier,
-                child: Circumference3(
-                  widthC: 900 * multiplier,
-                  heightC: 900 * multiplier,
+                width: width / 1.7,
+                height: height / 1.2,
+                child: const Circumference3(
+                  widthC: 900,
+                  heightC: 900,
                   opacity: 225,
                 ),
               ),
@@ -166,11 +153,11 @@ class _SchedulePageState extends State<SchedulePage> {
               right: -200 * multiplier,
               bottom: -250 * multiplier,
               child: SizedBox(
-                width: 950 * multiplier,
-                height: 950 * multiplier,
-                child: Circumference(
-                  widthC: 900 * multiplier,
-                  heightC: 900 * multiplier,
+                width: width / 1.7,
+                height: height / 1.2,
+                child: const Circumference(
+                  widthC: 900,
+                  heightC: 900,
                   opacity: 100,
                 ),
               ),
@@ -179,8 +166,13 @@ class _SchedulePageState extends State<SchedulePage> {
               left: 90,
               bottom: 290,
               child: SizedBox(
-                width: 250 * multiplier,
-                height: 250 * multiplier,
+                width: width /
+                    (av == 1.0
+                        ? 11
+                        : av == .65
+                            ? 6
+                            : 4),
+                height: height / 10,
                 child: const CirculosEnGrid(),
               ),
             ),
@@ -188,95 +180,129 @@ class _SchedulePageState extends State<SchedulePage> {
               right: -200,
               bottom: -270,
               child: SizedBox(
-                width: 600 * multiplier,
-                height: 600 * multiplier,
-                child: Circumference3(
-                  widthC: 700 * multiplier,
-                  heightC: 646 * multiplier,
+                width: width / 1.7,
+                height: height / 1.2,
+                child: const Circumference3(
+                  widthC: 900,
+                  heightC: 900,
                   opacity: 225,
                 ),
               ),
             ),
             Positioned(
-              top: 10,
-              left: multiplier == 1.0
-                  ? 50
-                  : multiplier == 0.65
-                      ? 50
-                      : 50,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 150),
-                    child: SizedBox(
-                      width: width / 1.2,
-                      height: height / 6,
+              top: height / 8,
+              left: 10,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 120.0),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      width: width /
+                          (av == 1.0
+                              ? 1.2
+                              : av == .65
+                                  ? 1.05
+                                  : 1.05),
+                      height: height /
+                          (av == 1.0
+                              ? 12
+                              : av == .65
+                                  ? 12
+                                  : 12),
                       child: Text(
                         'Horario de Eventos',
                         style: TextStyle(
-                          fontSize: (75 / fontSize),
+                          fontSize: width /
+                              (av == 1.0
+                                  ? 1.02
+                                  : av == .65
+                                      ? 1.02
+                                      : 15),
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
-                  ),
-                  Container(
-                    width: width / 1.2,
-                    height: height / 3,
-                    child: Stack(children: [
-                      Container(
-                        width: width / 1.5,
-                        height: height / 3,
-                        child: Image.asset(
-                          'assets/images/horarios1.jpg',
-                          fit: BoxFit.fill,
-                        ),
+                    Container(
+                      width: width / 1.02,
+                      height: height / (av == .45 ? 3 : 1.8),
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            top: 0,
+                            left: 0,
+                            child: Container(
+                              width: width / 1.02,
+                              height: height /
+                                  (av == 1.0
+                                      ? 1.8
+                                      : av == .65
+                                          ? 1.8
+                                          : 3),
+                              child: Image.asset(
+                                'assets/images/horarios1.jpg',
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 0,
+                            right: 0,
+                            child: IconButton(
+                              icon: Icon(Icons.add_circle,
+                                  color:
+                                      const Color.fromARGB(255, 226, 172, 10),
+                                  size: width / 20),
+                              onPressed: () => _showPopup(
+                                  context, 'assets/images/horarios1.jpg'),
+                            ),
+                          ),
+                        ],
                       ),
-                      Positioned(
-                        bottom: 0,
-                        right: 250,
-                        child: IconButton(
-                          icon: const Icon(Icons.add_circle,
-                              color: Color.fromARGB(255, 226, 172, 10),
-                              size: 20),
-                          onPressed: () => _showPopup(
-                              context, 'assets/images/horarios1.jpg'),
-                        ),
-                      ),
-                    ]),
-                  ),
-                  Container(
-                    width: width / 1.2,
-                    height: height / 3,
-                    child: Stack(children: [
-                      Padding(
-                        padding: const EdgeInsets.all(6.0),
-                        child: Container(
-                          width: width / 1.5,
-                          height: height / 1.5,
-                          child: Image.asset(
-                            'assets/images/horarios2.jpg',
-                            fit: BoxFit.fill,
+                    ),
+                    Container(
+                      width: width / 1.02,
+                      height: height /
+                          (av == 1.0
+                              ? 1.8
+                              : av == .65
+                                  ? 1.8
+                                  : 3),
+                      child: Stack(children: [
+                        Positioned(
+                          top: 0,
+                          left: 0,
+                          child: Container(
+                            width: width / 1.02,
+                            height: height /
+                                (av == 1.0
+                                    ? 1.8
+                                    : av == .65
+                                        ? 1.8
+                                        : 3),
+                            child: Image.asset(
+                              'assets/images/horarios2.jpg',
+                              fit: BoxFit.fill,
+                            ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        bottom: 0,
-                        right: 250,
-                        child: IconButton(
-                          icon: const Icon(Icons.add_circle,
-                              color: Color.fromARGB(255, 226, 172, 10),
-                              size: 20),
-                          onPressed: () => _showPopup(
-                            context,
-                            'assets/images/horarios2.jpg',
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: IconButton(
+                            icon: Icon(Icons.add_circle,
+                                color: const Color.fromARGB(255, 226, 172, 10),
+                                size: width / 20),
+                            onPressed: () => _showPopup(
+                              context,
+                              'assets/images/horarios2.jpg',
+                            ),
                           ),
                         ),
-                      ),
-                    ]),
-                  ),
-                ],
+                      ]),
+                    ),
+                  ],
+                ),
               ),
             ),
             Positioned(

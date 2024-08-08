@@ -8,8 +8,11 @@ import 'package:flutter_app/pages/schedule_page.dart';
 import 'package:flutter_app/pages/whatis_page.dart';
 import 'package:flutter_app/utils/screen_utils.dart';
 
-class BarNaviv extends StatelessWidget {
+class BarNaviv extends StatelessWidget implements PreferredSizeWidget {
   const BarNaviv({super.key});
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(BuildContext context) {

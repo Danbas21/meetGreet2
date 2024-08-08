@@ -117,23 +117,23 @@ class WhatIsPage extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              left: width / 10,
-              top: height / 10,
-              child: SizedBox(
-                width: width,
-                height: height,
-                child: Text(
-                  '¿QUÉ ES?',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: width / 20,
-                    fontFamily: 'Arial',
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
+            // Positioned(
+            //   left: width / 10,
+            //   top: height / 10,
+            //   child: SizedBox(
+            //     width: width,
+            //     height: height,
+            //     child: Text(
+            //       '¿QUÉ ES?',
+            //       style: TextStyle(
+            //         color: Colors.black,
+            //         fontSize: width / 20,
+            //         fontFamily: 'Arial',
+            //         fontWeight: FontWeight.bold,
+            //       ),
+            //     ),
+            //   ),
+            // ),
             Positioned(
               left: width /
                   (av == 1.0
@@ -158,85 +158,86 @@ class WhatIsPage extends StatelessWidget {
                 child: const CirculosEnGrid(),
               ),
             ),
-            Positioned(
-              left: width / 5,
-              bottom: height / 2.3,
-              child: SizedBox(
-                width: width / 1.5,
-                height: height / 2,
-                child: SizedBox(
-                  width: width,
-                  height: height,
-                  child: ListView.builder(
-                    itemCount: ListImages.listImage.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(2.0) * av,
-                        child: Image.asset(
-                          ListImages.listImage[index],
-                          fit: BoxFit.contain,
-                          width: width / 1.9,
-                          height: height,
-                        ),
-                      );
-                    },
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              top: height /
-                  (av == 1
-                      ? 1.9
-                      : av == .65
-                          ? 2
-                          : 2.3),
-              left: width /
-                  (av == 1
-                      ? 25
-                      : av == .65
-                          ? 25
-                          : 25),
-              child: SizedBox(
-                width: width / 1.09,
-                height: height / 2,
-                child: Text(
-                  paragraph,
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    fontSize: width /
-                        (av == 1.0
-                            ? 50
-                            : av == .65
-                                ? 40
-                                : 25),
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              right: av == .65 ? 35 : 40,
-              bottom: height /
-                  (av == 1.0
-                      ? 16
-                      : av == .65
-                          ? 8
-                          : 4),
-              child: Text(
-                '@MANCAVE_AUTOGRAPHS',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: width /
-                      (av == 1.0
-                          ? 90
-                          : av == .65
-                              ? 40
-                              : 50),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
+            // Positioned(
+            //   left: width / 5,
+            //   bottom: height / 2.3,
+            //   child: SizedBox(
+            //     width: width / 1.5,
+            //     height: height / 2,
+            //     child: SizedBox(
+            //       width: width,
+            //       height: height,
+            //       child: ListView.builder(
+            //         itemCount: ListImages.listImage.length,
+            //         scrollDirection: Axis.horizontal,
+            //         itemBuilder: (context, index) {
+            //           return Padding(
+            //             padding: const EdgeInsets.all(2.0) * av,
+            //             child: Image.asset(
+            //               ListImages.listImage[index],
+            //               fit: BoxFit.contain,
+            //               width: width / 1.9,
+            //               height: height,
+            //             ),
+            //           );
+            //         },
+            //       ),
+            //     ),
+            //   ),
+            // ),
+            // Positioned(
+            //   top: height /
+            //       (av == 1
+            //           ? 1.9
+            //           : av == .65
+            //               ? 2
+            //               : 2.3),
+            //   left: width /
+            //       (av == 1
+            //           ? 25
+            //           : av == .65
+            //               ? 25
+            //               : 25),
+            //   child: SizedBox(
+            //     width: width / 1.09,
+            //     height: height / 2,
+            //     child: Text(
+            //       paragraph,
+            //       textAlign: TextAlign.left,
+            //       style: TextStyle(
+            //         fontSize: width /
+            //             (av == 1.0
+            //                 ? 50
+            //                 : av == .65
+            //                     ? 40
+            //                     : 25),
+            //       ),
+            //     ),
+            //   ),
+            // ),
+            // Positioned(
+            //   right: av == .65 ? 35 : 40,
+            //   bottom: height /
+            //       (av == 1.0
+            //           ? 16
+            //           : av == .65
+            //               ? 8
+            //               : 4),
+            //   child: Text(
+            //     '@MANCAVE_AUTOGRAPHS',
+            //     style: TextStyle(
+            //       color: Colors.black,
+            //       fontSize: width /
+            //           (av == 1.0
+            //               ? 90
+            //               : av == .65
+            //                   ? 40
+            //                   : 50),
+            //       fontWeight: FontWeight.bold,
+            //     ),
+            //   ),
+            // ),
+
             Positioned(
               left: width /
                   (av == 1.0
@@ -254,6 +255,23 @@ class WhatIsPage extends StatelessWidget {
                             : .9),
                 height: 90 * av,
                 child: const BarNaviv(),
+              ),
+            ),
+            Positioned(
+              top: height / 12,
+              right: width / 11,
+              child: Container(
+                width: width / 1.2,
+                height: height / 1.2,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/images/rectangle_24.png',
+                    ),
+                    fit: BoxFit.contain,
+                    opacity: 0.5,
+                  ),
+                ),
               ),
             ),
           ],

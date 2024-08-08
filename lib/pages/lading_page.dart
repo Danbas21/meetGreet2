@@ -22,11 +22,6 @@ class HomePage extends StatelessWidget {
             ? 5.2
             : 4;
 
-    double fontSize = av == 1.0
-        ? 1.5
-        : av == 0.65
-            ? 1.85
-            : 2.3;
     double variant = av == 1.0
         ? 8.5
         : av == .65
