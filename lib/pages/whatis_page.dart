@@ -61,8 +61,6 @@ class WhatIsPage extends StatelessWidget {
                 width: width / 1.7,
                 height: height / 1.2,
                 child: const Circumference(
-                  widthC: 900,
-                  heightC: 900,
                   opacity: 100,
                 ),
               ),
@@ -111,8 +109,6 @@ class WhatIsPage extends StatelessWidget {
                 width: width / 1.7,
                 height: height / 1.2,
                 child: const Circumference(
-                  widthC: 900,
-                  heightC: 900,
                   opacity: 100,
                 ),
               ),
@@ -254,7 +250,7 @@ class WhatIsPage extends StatelessWidget {
                             ? 1.11
                             : .9),
                 height: 90 * av,
-                child: const BarNaviv(),
+                child: BarNaviv(),
               ),
             ),
             Positioned(

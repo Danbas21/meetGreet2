@@ -54,8 +54,6 @@ class ListInvites extends StatelessWidget {
                     width: 800 * multiplier,
                     height: 800 * multiplier,
                     child: Circumference(
-                      widthC: 700 * multiplier,
-                      heightC: 646 * multiplier,
                       opacity: 100,
                     ),
                   ),
@@ -89,8 +87,6 @@ class ListInvites extends StatelessWidget {
                     width: 800 * multiplier,
                     height: 800 * multiplier,
                     child: Circumference(
-                      widthC: 700 * multiplier,
-                      heightC: 646 * multiplier,
                       opacity: 100,
                     ),
                   ),
@@ -124,8 +120,6 @@ class ListInvites extends StatelessWidget {
                     width: 800 * multiplier,
                     height: 800 * multiplier,
                     child: Circumference(
-                      widthC: 700 * multiplier,
-                      heightC: 646 * multiplier,
                       opacity: 100,
                     ),
                   ),
@@ -159,8 +153,6 @@ class ListInvites extends StatelessWidget {
                     width: 800 * multiplier,
                     height: 800 * multiplier,
                     child: Circumference(
-                      widthC: 700 * multiplier,
-                      heightC: 645.04 * multiplier,
                       opacity: 100,
                     ),
                   ),
@@ -399,7 +391,7 @@ class ListInvites extends StatelessWidget {
                                 ? 1.11
                                 : .9),
                     height: 90 * av,
-                    child: const BarNaviv(),
+                    child: BarNaviv(),
                   ),
                 ),
               ],

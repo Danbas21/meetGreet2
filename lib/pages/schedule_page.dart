@@ -64,8 +64,6 @@ class _SchedulePageState extends State<SchedulePage> {
                 width: width / 1.7,
                 height: height / 1.2,
                 child: const Circumference(
-                  widthC: 900,
-                  heightC: 900,
                   opacity: 100,
                 ),
               ),
@@ -104,8 +102,6 @@ class _SchedulePageState extends State<SchedulePage> {
                 width: width / 1.7,
                 height: height / 1.2,
                 child: const Circumference(
-                  widthC: 900,
-                  heightC: 900,
                   opacity: 100,
                 ),
               ),
@@ -130,8 +126,6 @@ class _SchedulePageState extends State<SchedulePage> {
                 width: width / 1.7,
                 height: height / 1.2,
                 child: const Circumference(
-                  widthC: 900,
-                  heightC: 900,
                   opacity: 100,
                 ),
               ),
@@ -156,8 +150,6 @@ class _SchedulePageState extends State<SchedulePage> {
                 width: width / 1.7,
                 height: height / 1.2,
                 child: const Circumference(
-                  widthC: 900,
-                  heightC: 900,
                   opacity: 100,
                 ),
               ),
@@ -321,7 +313,7 @@ class _SchedulePageState extends State<SchedulePage> {
                             ? 1.11
                             : .9),
                 height: 90 * av,
-                child: const BarNaviv(),
+                child: BarNaviv(),
               ),
             ),
           ],

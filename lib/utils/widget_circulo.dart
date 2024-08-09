@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
 
 class Circumference extends StatelessWidget {
-  final double widthC;
-  final double heightC;
   final int opacity;
 
   const Circumference({
     super.key,
-    required this.widthC,
-    required this.heightC,
     required this.opacity,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: widthC,
-      height: heightC,
+      width: 950,
+      height: 950,
       decoration: BoxDecoration(
         color: Colors.white,
         shape: BoxShape.circle,

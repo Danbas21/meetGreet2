@@ -23,7 +23,6 @@ class AnimationMainText extends StatefulWidget {
 class HomePageState extends State<AnimationMainText>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-
   late Animation<double> _positionAnimation;
   late Animation<double> _opacityAnimation;
 

@@ -16,7 +16,7 @@ class ButtonMain extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double multiplier = ResponsiveUtil.getMultiplier(context);
+    double av = ResponsiveUtil.getMultiplier(context);
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return SizedBox(
@@ -30,23 +30,21 @@ class ButtonMain extends StatelessWidget {
           );
         },
         icon: Icon(
-          Icons.arrow_downward,
+          Icons.arrow_forward_ios,
           color: Colors.white,
-          size: width / 22,
+          size: width / (av == 1.0 ? 40 : 15),
         ),
         label: Text(
           title,
-          textAlign: TextAlign.left,
           style: const TextStyle(
             color: Colors.white,
           ),
         ),
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.blue,
-          padding: EdgeInsets.symmetric(
-              horizontal: 14 * multiplier, vertical: 10 * multiplier),
+          backgroundColor: Color.fromARGB(255, 83, 158, 228),
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
           textStyle: TextStyle(
-            fontSize: width / 23,
+            fontSize: width / (av == 1.0 ? 40 : 15),
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),

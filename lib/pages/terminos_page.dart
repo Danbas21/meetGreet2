@@ -25,8 +25,6 @@ class Terminos extends StatelessWidget {
               width: 800,
               height: 800,
               child: Circumference(
-                widthC: 700,
-                heightC: 645.04,
                 opacity: 100,
               ),
             ),
@@ -60,8 +58,6 @@ class Terminos extends StatelessWidget {
               width: 800,
               height: 800,
               child: Circumference(
-                widthC: 700,
-                heightC: 645.04,
                 opacity: 100,
               ),
             ),
@@ -95,8 +91,6 @@ class Terminos extends StatelessWidget {
               width: 800,
               height: 800,
               child: Circumference(
-                widthC: 700,
-                heightC: 645.04,
                 opacity: 100,
               ),
             ),
@@ -130,8 +124,6 @@ class Terminos extends StatelessWidget {
               width: 800,
               height: 800,
               child: Circumference(
-                widthC: 700,
-                heightC: 645.04,
                 opacity: 100,
               ),
             ),
@@ -196,7 +188,7 @@ class Terminos extends StatelessWidget {
             child: SizedBox(
               width: 900 * multiplier,
               height: 70 * multiplier,
-              child: const BarNaviv(),
+              child: BarNaviv(),
             ),
           ),
         ]),

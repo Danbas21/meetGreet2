@@ -50,8 +50,6 @@ class LandingPage2 extends StatelessWidget {
                       width: width / 1.7,
                       height: height / 1.2,
                       child: const Circumference(
-                        widthC: 900,
-                        heightC: 900,
                         opacity: 100,
                       ),
                     ),
