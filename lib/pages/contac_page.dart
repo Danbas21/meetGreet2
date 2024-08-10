@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/drawer_page.dart';
+import 'package:flutter_app/utils/bar_navegacion.dart';
 import 'package:flutter_app/utils/screen_utils.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
@@ -40,6 +42,8 @@ class _ContactFormPageState extends State<ContactFormPage>
     double av = ResponsiveUtil.getMultiplier(context);
 
     return Scaffold(
+      appBar: const BarNavi(),
+      drawer: width < 1024 ? const AppDrawer() : null,
       body: SingleChildScrollView(
         child: SizedBox(
           width: width,

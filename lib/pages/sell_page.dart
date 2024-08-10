@@ -331,7 +331,7 @@ class SellTicket extends StatelessWidget {
                             ? 1.11
                             : .9),
                 height: 90 * av,
-                child: BarNaviv(),
+                child: BarNavi(),
               ),
             ),
           ],

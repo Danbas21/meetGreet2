@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/drawer_page.dart';
+import 'package:flutter_app/pages/footer_page.dart';
 import 'package:flutter_app/utils/bar_navegacion.dart';
 import 'package:flutter_app/utils/list_image.dart';
 import 'package:flutter_app/utils/screen_utils.dart';
@@ -17,6 +19,8 @@ class WhatIsPage extends StatelessWidget {
         '''Meet & Greet Experience será el primer evento de firma de autógrafos en todo México, donde contaremos con la asistencia de los mejores deportistas en la historia de México. Podrás convivir con ellos, tomarte una foto, firmar tu artículo y autenticarlo con la empresa líder en Estados Unidos, BECKETT.''';
 
     return Scaffold(
+      appBar: const BarNavi(),
+      drawer: width < 1100 ? const AppDrawer() : null,
       body: SizedBox(
         width: width,
         height: height,
@@ -27,7 +31,7 @@ class WhatIsPage extends StatelessWidget {
                   (av == .45
                       ? -14
                       : av == .65
-                          ? -14
+                          ? -20
                           : -25),
               left: width /
                   (av == .45
@@ -71,9 +75,7 @@ class WhatIsPage extends StatelessWidget {
               child: SizedBox(
                 width: width / 1.7,
                 height: height / 1.2,
-                child: const Circumference2(
-                  widthC: 900,
-                  heightC: 900,
+                child: const Circumference(
                   opacity: 50,
                 ),
               ),
@@ -113,23 +115,6 @@ class WhatIsPage extends StatelessWidget {
                 ),
               ),
             ),
-            // Positioned(
-            //   left: width / 10,
-            //   top: height / 10,
-            //   child: SizedBox(
-            //     width: width,
-            //     height: height,
-            //     child: Text(
-            //       '¿QUÉ ES?',
-            //       style: TextStyle(
-            //         color: Colors.black,
-            //         fontSize: width / 20,
-            //         fontFamily: 'Arial',
-            //         fontWeight: FontWeight.bold,
-            //       ),
-            //     ),
-            //   ),
-            // ),
             Positioned(
               left: width /
                   (av == 1.0
@@ -141,7 +126,7 @@ class WhatIsPage extends StatelessWidget {
                   (av == 1.0
                       ? 12
                       : av == .65
-                          ? 10
+                          ? 6
                           : 16),
               child: SizedBox(
                 width: width /
@@ -154,107 +139,8 @@ class WhatIsPage extends StatelessWidget {
                 child: const CirculosEnGrid(),
               ),
             ),
-            // Positioned(
-            //   left: width / 5,
-            //   bottom: height / 2.3,
-            //   child: SizedBox(
-            //     width: width / 1.5,
-            //     height: height / 2,
-            //     child: SizedBox(
-            //       width: width,
-            //       height: height,
-            //       child: ListView.builder(
-            //         itemCount: ListImages.listImage.length,
-            //         scrollDirection: Axis.horizontal,
-            //         itemBuilder: (context, index) {
-            //           return Padding(
-            //             padding: const EdgeInsets.all(2.0) * av,
-            //             child: Image.asset(
-            //               ListImages.listImage[index],
-            //               fit: BoxFit.contain,
-            //               width: width / 1.9,
-            //               height: height,
-            //             ),
-            //           );
-            //         },
-            //       ),
-            //     ),
-            //   ),
-            // ),
-            // Positioned(
-            //   top: height /
-            //       (av == 1
-            //           ? 1.9
-            //           : av == .65
-            //               ? 2
-            //               : 2.3),
-            //   left: width /
-            //       (av == 1
-            //           ? 25
-            //           : av == .65
-            //               ? 25
-            //               : 25),
-            //   child: SizedBox(
-            //     width: width / 1.09,
-            //     height: height / 2,
-            //     child: Text(
-            //       paragraph,
-            //       textAlign: TextAlign.left,
-            //       style: TextStyle(
-            //         fontSize: width /
-            //             (av == 1.0
-            //                 ? 50
-            //                 : av == .65
-            //                     ? 40
-            //                     : 25),
-            //       ),
-            //     ),
-            //   ),
-            // ),
-            // Positioned(
-            //   right: av == .65 ? 35 : 40,
-            //   bottom: height /
-            //       (av == 1.0
-            //           ? 16
-            //           : av == .65
-            //               ? 8
-            //               : 4),
-            //   child: Text(
-            //     '@MANCAVE_AUTOGRAPHS',
-            //     style: TextStyle(
-            //       color: Colors.black,
-            //       fontSize: width /
-            //           (av == 1.0
-            //               ? 90
-            //               : av == .65
-            //                   ? 40
-            //                   : 50),
-            //       fontWeight: FontWeight.bold,
-            //     ),
-            //   ),
-            // ),
-
             Positioned(
-              left: width /
-                  (av == 1.0
-                      ? 12
-                      : av == .65
-                          ? 20
-                          : -10),
-              top: 0,
-              child: SizedBox(
-                width: width /
-                    (av == 1.0
-                        ? 1.11
-                        : av == .65
-                            ? 1.11
-                            : .9),
-                height: 90 * av,
-                child: BarNaviv(),
-              ),
-            ),
-            Positioned(
-              top: height / 12,
+              top: height / 20,
               right: width / 11,
               child: Container(
                 width: width / 1.2,
@@ -268,6 +154,14 @@ class WhatIsPage extends StatelessWidget {
                     opacity: 0.5,
                   ),
                 ),
+              ),
+            ),
+            Positioned(
+              bottom: 0,
+              child: SizedBox(
+                width: width,
+                height: height / 7,
+                child: Footer(),
               ),
             ),
           ],

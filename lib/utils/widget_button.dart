@@ -32,7 +32,7 @@ class ButtonMain extends StatelessWidget {
         icon: Icon(
           Icons.arrow_forward_ios,
           color: Colors.white,
-          size: width / (av == 1.0 ? 40 : 15),
+          size: width / (av == 1.0 ? 40 : 40),
         ),
         label: Text(
           title,
@@ -44,7 +44,7 @@ class ButtonMain extends StatelessWidget {
           backgroundColor: Color.fromARGB(255, 83, 158, 228),
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
           textStyle: TextStyle(
-            fontSize: width / (av == 1.0 ? 40 : 15),
+            fontSize: width / (av == 1.0 ? 40 : 40),
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),

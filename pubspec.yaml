@@ -30,6 +30,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/banner/
+    - assets/images/pots/
     - assets/images/e9b4486e5cb972cdb482690080dfcd70.png
     - assets/images/horarios1.jpg
     - assets/images/horarios2.jpg
@@ -85,5 +86,32 @@ flutter:
     - assets/images/luchas/lucha6.jpg
     - assets/images/luchas/lucha7.jpg
     - assets/images/rectangle_24.png
-    - assets/images/horarios1.jpg
-    - assets/images/horarios2.jpg
+    - assets/images/horarios1.png
+    - assets/images/horarios2.png
+    - assets/images/pots/box/box1.png
+    - assets/images/pots/box/box2.png
+    - assets/images/pots/box/box3.png
+    - assets/images/pots/box/box5.png
+    - assets/images/pots/box/box6.png
+    - assets/images/pots/box/box7.png
+    - assets/images/pots/box/box8.png
+    - assets/images/pots/box/box9.png
+    - assets/images/pots/fut/fut1.png
+    - assets/images/pots/fut/fut2.png
+    - assets/images/pots/fut/fut3.png
+    - assets/images/pots/fut/fut4.png
+    - assets/images/pots/fut/fut5.png
+    - assets/images/pots/fut/fut6.png
+    - assets/images/pots/fut/fut7.png
+    - assets/images/pots/fut/fut8.png
+    - assets/images/pots/fut/fut9.png
+    - assets/images/pots/fut/fut10.png
+    - assets/images/pots/luchas/lucha2.png
+    - assets/images/pots/luchas/lucha3.png
+    - assets/images/pots/luchas/lucha4.png
+    - assets/images/pots/luchas/lucha6.png
+    - assets/images/pots/luchas/lucha7.png
+    - assets/images/pots/estre/estre1.png
+    - assets/images/pots/estre/estre2.png
+    - assets/images/pots/estre/estre3.png
+    - assets/images/pots/estre/estre4.png

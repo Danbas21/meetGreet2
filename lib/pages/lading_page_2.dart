@@ -14,15 +14,15 @@ class LandingPage2 extends StatelessWidget {
     double av = ResponsiveUtil.getMultiplier(context);
 
     double spaceElement = av == 1.0
-        ? 6.5
+        ? 10
         : av == .65
-            ? 5.7
+            ? 5.6
             : 5.2;
 
     double variant = av == 1.0
-        ? 7.5
+        ? 11
         : av == .65
-            ? 6.5
+            ? 6
             : 6;
 
     return SizedBox(
@@ -81,22 +81,21 @@ class LandingPage2 extends StatelessWidget {
                   Positioned(
                     top: height /
                         (av == 1.0
-                            ? 8
+                            ? -5
                             : av == .65
                                 ? 90
                                 : 15),
-                    left: width /
-                        (av == 1.0
-                            ? -200
-                            : av == .65
-                                ? 8
-                                : 10),
+                    left: av == 1.0
+                        ? 25
+                        : av == .65
+                            ? 10
+                            : 10,
                     child: SizedBox(
                       width: av == .45
                           ? width / 1.35
                           : av == .65
-                              ? width / 1.5
-                              : width / 1.7,
+                              ? width / 1.43
+                              : width / 2.5,
                       height: height * 1.1,
                       child: Stack(
                         children: [
@@ -152,61 +151,24 @@ class LandingPage2 extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Positioned(
-                  //   top: height /
-                  //       (av == 1.0
-                  //           ? 4
-                  //           : av == .65
-                  //               ? 15
-                  //               : 7),
-                  //   left: width /
-                  //       (av == 1.0
-                  //           ? 1.8
-                  //           : av == .65
-                  //               ? 15
-                  //               : 5),
-                  //   child: Text(
-                  //     'UBICACIÓN',
-                  //     style: TextStyle(
-                  //       color: Colors.black,
-                  //       fontSize: width /
-                  //           (av == 1.0
-                  //               ? 20
-                  //               : av == .65
-                  //                   ? 12
-                  //                   : 10),
-                  //     ),
-                  //   ),
-                  // ),
                   Positioned(
                     top: height /
                         (av == 1.0
-                            ? -25
+                            ? -10
                             : av == .65
-                                ? -5
-                                : -5),
+                                ? 13
+                                : 6),
                     left: width /
                         (av == 1.0
-                            ? 2.4
+                            ? 3
                             : av == .65
-                                ? 8
-                                : 15),
-                    child: Container(
-                      width: width /
-                          (av == 1.0
-                              ? 1.4
-                              : av == .65
-                                  ? 1.4
-                                  : 1.02),
-                      height: height / 1.2,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(
-                            'assets/images/maps.png',
-                          ),
-                          fit: BoxFit.contain,
-                          opacity: 0.5,
-                        ),
+                                ? 2.3
+                                : 10),
+                    child: SizedBox(
+                      width: width / 1.5,
+                      height: height / 1.5,
+                      child: Image.asset(
+                        'assets/images/maps.png',
                       ),
                     ),
                   ),

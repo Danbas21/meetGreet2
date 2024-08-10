@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/drawer_page.dart';
+import 'package:flutter_app/pages/footer_page.dart';
 import 'package:flutter_app/utils/bar_navegacion.dart';
 import 'package:flutter_app/utils/invite_grid.dart';
 import 'package:flutter_app/utils/list_images.dart';
@@ -13,7 +15,7 @@ class ListInvites extends StatelessWidget {
   Widget build(BuildContext context) {
     double multiplier = ResponsiveUtil.getMultiplier(context);
     double av = ResponsiveUtil.getMultiplier(context);
-
+    final height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
     double widthContainer = multiplier == 1.0
@@ -40,6 +42,8 @@ class ListInvites extends StatelessWidget {
             : 3.86;
 
     return Scaffold(
+      appBar: const BarNavi(),
+      drawer: width < 1100 ? const AppDrawer() : null,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -53,7 +57,7 @@ class ListInvites extends StatelessWidget {
                   child: SizedBox(
                     width: 800 * multiplier,
                     height: 800 * multiplier,
-                    child: Circumference(
+                    child: const Circumference(
                       opacity: 100,
                     ),
                   ),
@@ -86,7 +90,7 @@ class ListInvites extends StatelessWidget {
                   child: SizedBox(
                     width: 800 * multiplier,
                     height: 800 * multiplier,
-                    child: Circumference(
+                    child: const Circumference(
                       opacity: 100,
                     ),
                   ),
@@ -201,7 +205,9 @@ class ListInvites extends StatelessWidget {
                         child: SizedBox(
                           width: widthContainer,
                           height: heightContainer,
-                          child: ImageGrid(images: ListImages.listBox),
+                          child: ImageGrid(
+                              images: ListImages.listBox,
+                              descrip: ListImages.listBoxPots),
                         ),
                       ),
                       Padding(
@@ -222,7 +228,9 @@ class ListInvites extends StatelessWidget {
                         child: SizedBox(
                           width: widthContainer,
                           height: heightContainer,
-                          child: ImageGrid(images: ListImages.listFut),
+                          child: ImageGrid(
+                              images: ListImages.listFut,
+                              descrip: ListImages.listFutPots),
                         ),
                       ),
                       Padding(
@@ -243,7 +251,9 @@ class ListInvites extends StatelessWidget {
                         child: SizedBox(
                           width: widthContainer,
                           height: heightContainer,
-                          child: ImageGrid(images: ListImages.listLuch),
+                          child: ImageGrid(
+                              images: ListImages.listLuch,
+                              descrip: ListImages.listLuchPost),
                         ),
                       ),
                       Padding(
@@ -264,7 +274,9 @@ class ListInvites extends StatelessWidget {
                         child: SizedBox(
                           width: widthContainer,
                           height: heightContainer,
-                          child: ImageGrid(images: ListImages.listNlf),
+                          child: ImageGrid(
+                              images: ListImages.listNlf,
+                              descrip: ListImages.listPostNlf),
                         ),
                       ),
                       Padding(
@@ -285,7 +297,9 @@ class ListInvites extends StatelessWidget {
                         child: SizedBox(
                           width: widthContainer,
                           height: heightContainer,
-                          child: ImageGrid(images: ListImages.listUFC),
+                          child: ImageGrid(
+                              images: ListImages.listUFC,
+                              descrip: ListImages.listUFC),
                         ),
                       ),
                       Padding(
@@ -306,7 +320,9 @@ class ListInvites extends StatelessWidget {
                         child: SizedBox(
                           width: widthContainer,
                           height: heightContainer,
-                          child: ImageGrid(images: ListImages.listRacket),
+                          child: ImageGrid(
+                              images: ListImages.listRacket,
+                              descrip: ListImages.listPotsRacket),
                         ),
                       ),
                       Padding(
@@ -327,7 +343,9 @@ class ListInvites extends StatelessWidget {
                         child: SizedBox(
                           width: widthContainer,
                           height: heightContainer,
-                          child: ImageGrid(images: ListImages.listNba),
+                          child: ImageGrid(
+                              images: ListImages.listNba,
+                              descrip: ListImages.listNba),
                         ),
                       ),
                       Padding(
@@ -348,7 +366,9 @@ class ListInvites extends StatelessWidget {
                         child: SizedBox(
                           width: widthContainer,
                           height: heightContainer,
-                          child: ImageGrid(images: ListImages.listWomanWwe),
+                          child: ImageGrid(
+                              images: ListImages.listWomanWwe,
+                              descrip: ListImages.listWomanWwe),
                         ),
                       ),
                       Padding(
@@ -369,29 +389,17 @@ class ListInvites extends StatelessWidget {
                         child: SizedBox(
                           width: widthContainer,
                           height: heightContainer,
-                          child: ImageGrid(images: ListImages.listBBX),
+                          child: ImageGrid(
+                              images: ListImages.listBBX,
+                              descrip: ListImages.listBBX),
                         ),
                       ),
+                      SizedBox(
+                        width: width,
+                        height: height / 7,
+                        child: Footer(),
+                      ),
                     ],
-                  ),
-                ),
-                Positioned(
-                  left: width /
-                      (av == 1.0
-                          ? 12
-                          : av == .65
-                              ? 20
-                              : -7),
-                  top: 0,
-                  child: SizedBox(
-                    width: width /
-                        (av == 1.0
-                            ? 1.11
-                            : av == .65
-                                ? 1.11
-                                : .9),
-                    height: 90 * av,
-                    child: BarNaviv(),
                   ),
                 ),
               ],

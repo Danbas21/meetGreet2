@@ -24,7 +24,7 @@ class LadingPage3 extends StatelessWidget {
               top: 0,
               child: SizedBox(
                 width: width,
-                height: height * 1.3,
+                height: height,
                 child: Stack(
                   children: [
                     Positioned(
@@ -111,7 +111,7 @@ class LadingPage3 extends StatelessWidget {
                       left: 10,
                       top: height /
                           (av == 1.0
-                              ? 40
+                              ? 10
                               : av == .65
                                   ? 7
                                   : 16),

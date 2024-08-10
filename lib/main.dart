@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/baner_principal.dart';
+import 'package:flutter_app/pages/drawer_page.dart';
 import 'package:flutter_app/pages/footer_page.dart';
 import 'package:flutter_app/pages/lading_page.dart';
 import 'package:flutter_app/pages/lading_page_2.dart';
 import 'package:flutter_app/pages/lading_page_3.dart';
-import 'package:flutter_app/utils/animation_card.dart';
 import 'package:flutter_app/utils/bar_navegacion.dart';
 import 'package:flutter_app/utils/screen_utils.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -26,16 +28,13 @@ class MyApp extends StatelessWidget {
       ),
       title: 'Flutter App',
       home: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(50),
-          child: BarNaviv(),
-        ),
+        appBar: const BarNavi(),
+        drawer: width < 1100 ? const AppDrawer() : null,
         body: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: height / 1.5,
+                height: height,
                 width: width,
                 child: const BannerApp(),
               ),
@@ -43,20 +42,30 @@ class MyApp extends StatelessWidget {
                 width: width,
                 height: height /
                     (av == 1.0
-                        ? 1
+                        ? 1.5
                         : av == .65
-                            ? 1
+                            ? 1.65
                             : 2.63),
                 child: const HomePage(),
               ),
               SizedBox(
                 width: width,
-                height: height,
+                height: height /
+                    (av == 1.0
+                        ? 1.5
+                        : av == .65
+                            ? 1.3
+                            : 2.63),
                 child: const LandingPage2(),
               ),
               SizedBox(
                 width: width,
-                height: height,
+                height: height /
+                    (av == 1.0
+                        ? 1.3
+                        : av == .65
+                            ? 1.7
+                            : 2.63),
                 child: const LadingPage3(),
               ),
               SizedBox(
