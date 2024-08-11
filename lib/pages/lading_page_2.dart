@@ -130,7 +130,7 @@ class LandingPage2 extends StatelessWidget {
                               width: (width / variant),
                               height: height,
                               child: Image.asset(
-                                'assets/images/rectangle_10.png',
+                                'assets/images/rectangle_9.png',
                                 fit: BoxFit.contain,
                               ),
                             ),

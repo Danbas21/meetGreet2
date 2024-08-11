@@ -24,9 +24,9 @@ class HomePage extends StatelessWidget {
             : 4;
 
     double variant = av == 1.0
-        ? 10
+        ? 9.7
         : av == .65
-            ? 6
+            ? 8
             : 5;
 
     return SizedBox(
@@ -66,23 +66,12 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    left: -width / 4,
-                    bottom: height / 2,
-                    child: SizedBox(
-                      width: width / 1.7,
-                      height: height / 1.2,
-                      child: const Circumference(
-                        opacity: 100,
-                      ),
-                    ),
-                  ),
-                  Positioned(
                     bottom: height /
                         (av == .45
-                            ? 10
+                            ? 5
                             : av == .65
                                 ? -10
-                                : 3),
+                                : 15),
                     left: width /
                         (av == .45
                             ? 1.8
@@ -96,7 +85,7 @@ class HomePage extends StatelessWidget {
                               : av == .65
                                   ? 4
                                   : 8),
-                      height: av == .45 ? height / 1.5 : height / 1.5,
+                      height: av == .45 ? height / 1.5 : height / 1.7,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
@@ -212,7 +201,7 @@ class HomePage extends StatelessWidget {
                   Positioned(
                     top: height /
                         (av == 1.0
-                            ? 4
+                            ? 7
                             : av == .65
                                 ? 10
                                 : 6.5),

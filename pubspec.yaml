@@ -30,7 +30,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/banner/
-    - assets/images/pots/
+
     - assets/images/e9b4486e5cb972cdb482690080dfcd70.png
     - assets/images/horarios1.jpg
     - assets/images/horarios2.jpg

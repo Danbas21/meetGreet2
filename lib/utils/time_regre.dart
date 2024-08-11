@@ -42,7 +42,7 @@ class _CountdownPageState extends State<CountdownPage> {
       child: Text(
         'Faltan: $days días, $hours horas, $minutes minutos, $seconds segundos',
         style: TextStyle(
-            fontSize: width / (av == 1.0 ? 40 : 35),
+            fontSize: width / (av == 1.0 ? 30 : 25),
             color: const Color.fromARGB(
               255,
               0,

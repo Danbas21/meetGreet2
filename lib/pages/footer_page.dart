@@ -10,19 +10,20 @@ class Footer extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     double av = ResponsiveUtil.getMultiplier(context);
     return Container(
-      padding: const EdgeInsets.all(20.0),
+      width: width,
+      height: 20,
+      padding: const EdgeInsets.all(10.0),
       decoration: const BoxDecoration(
-        color: const Color.fromARGB(255, 121, 152, 184),
+        color: Color.fromARGB(255, 121, 152, 184),
         borderRadius: BorderRadius.only(
-          // Añadimos bordes redondeados
           topLeft: Radius.circular(30),
           topRight: Radius.circular(30),
         ),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(width: 10),
           Image.asset(
             'assets/images/rectangle_18.png',
             width: width /
@@ -36,10 +37,11 @@ class Footer extends StatelessWidget {
           SizedBox(
             width: width /
                 (av == 1.0
-                    ? 1.8
+                    ? 1.7
                     : av == .65
                         ? 2
                         : 5),
+            height: height / 7,
             child: Text(
               'Dirección\nBoulevard Interlomas 5 Centro Urbano San Fernando. La herradura 52786 Huixquilucan. Estado de México.',
               textAlign: TextAlign.center,
@@ -47,7 +49,7 @@ class Footer extends StatelessWidget {
                   color: Colors.white,
                   fontSize: width /
                       (av == 1.0
-                          ? 70
+                          ? 60
                           : av == .65
                               ? 40
                               : 50)),

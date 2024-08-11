@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/main.dart';
 import 'package:flutter_app/pages/baner_principal.dart';
 import 'package:flutter_app/pages/footer_page.dart';
 import 'package:flutter_app/pages/invite_page.dart';
@@ -98,47 +99,7 @@ class _AppDrawerState extends State<AppDrawer>
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Scaffold(
-                            appBar: const BarNavi(),
-                            drawer: width < 1024 ? const AppDrawer() : null,
-                            body: SingleChildScrollView(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    height: height / 1.5,
-                                    width: width,
-                                    child: const BannerApp(),
-                                  ),
-                                  SizedBox(
-                                    width: width,
-                                    height: height /
-                                        (av == 1.0
-                                            ? 1
-                                            : av == .65
-                                                ? 1
-                                                : 2.63),
-                                    child: const HomePage(),
-                                  ),
-                                  SizedBox(
-                                    width: width,
-                                    height: height,
-                                    child: const LandingPage2(),
-                                  ),
-                                  SizedBox(
-                                    width: width,
-                                    height: height,
-                                    child: const LadingPage3(),
-                                  ),
-                                  SizedBox(
-                                    width: width,
-                                    height: height / 6.5,
-                                    child: Footer(),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
+                          builder: (context) => ResponsiveZoomableWebPage(),
                         ),
                       );
                     },
