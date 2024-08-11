@@ -23,24 +23,30 @@ class BarNavi extends StatelessWidget implements PreferredSizeWidget {
     double av = ResponsiveUtil.getMultiplier(context);
 
     return AppBar(
-      clipBehavior: Clip.antiAlias,
       backgroundColor: const Color.fromARGB(100, 83, 158, 228),
       elevation: 1,
+      title: Text('$width'),
       scrolledUnderElevation: 2,
       surfaceTintColor: Colors.white,
-      leading: width < 1100
-          ? Builder(
+      leading: width > 1200
+          ? null
+          : Builder(
               builder: (BuildContext context) {
-                return IconButton(
-                  icon: const Icon(Icons.menu),
-                  onPressed: () {
-                    Scaffold.of(context).openDrawer();
-                  },
+                return GestureDetector(
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeInOutBack,
+                    child: IconButton(
+                      icon: const Icon(Icons.menu_sharp),
+                      onPressed: () {
+                        Scaffold.of(context).openDrawer();
+                      },
+                    ),
+                  ),
                 );
               },
-            )
-          : null,
-      actions: width >= 1100
+            ),
+      actions: width > 1200
           ? <Widget>[
               TextButton(
                 onPressed: () {
@@ -48,7 +54,7 @@ class BarNavi extends StatelessWidget implements PreferredSizeWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => Scaffold(
-                        appBar: BarNavi(),
+                        appBar: const BarNavi(),
                         body: SingleChildScrollView(
                           child: Column(
                             children: [
