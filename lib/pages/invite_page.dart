@@ -14,7 +14,7 @@ class ListInvites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double multiplier = ResponsiveUtil.getMultiplier(context);
-    double av = ResponsiveUtil.getMultiplier(context);
+
     final height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
@@ -396,7 +396,7 @@ class ListInvites extends StatelessWidget {
                       ),
                       SizedBox(
                         width: width,
-                        height: height / 7,
+                        height: height / 5.5,
                         child: Footer(),
                       ),
                     ],

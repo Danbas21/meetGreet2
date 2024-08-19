@@ -305,7 +305,7 @@ class _SchedulePageState extends State<SchedulePage> {
                   bottom: 0,
                   child: SizedBox(
                     width: width,
-                    height: height / 6.5,
+                    height: height / 6,
                     child: Footer(),
                   ),
                 ),

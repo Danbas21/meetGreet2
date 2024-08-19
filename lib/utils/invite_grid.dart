@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/utils/animation_card.dart';
-import 'package:flutter_app/utils/utils_list.dart';
 
 class ImageGrid extends StatelessWidget {
   final List<String> images;
@@ -20,10 +19,14 @@ class ImageGrid extends StatelessWidget {
         ),
         itemCount: images.length,
         itemBuilder: (context, index) {
-          return RotatableImageCard(
-            frontImage: images[index % images.length],
-            description: descrip[index % descrip.length],
-          );
+          if (images.isEmpty || descrip.isEmpty) {
+            return const CircularProgressIndicator();
+          } else {
+            return RotatableImageCard(
+              frontImage: images[index % images.length],
+              description: descrip[index % descrip.length],
+            );
+          }
         },
       ),
     );

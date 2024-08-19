@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_app/utils/animation_main.dart';
-import 'package:flutter_app/utils/animation_text.dart';
-import 'package:flutter_app/utils/bar_navegacion.dart';
+
 import 'package:flutter_app/utils/screen_utils.dart';
 import 'package:flutter_app/utils/time_regre.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
@@ -33,7 +32,7 @@ class HomePage extends StatelessWidget {
       width: width,
       height: height /
           (av == 1.0
-              ? 1.5
+              ? 1.6
               : av == .65
                   ? 1.7
                   : 2.63),

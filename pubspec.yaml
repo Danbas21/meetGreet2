@@ -9,7 +9,8 @@ environment:
 
 dependencies:
   auto_size_text: ^3.0.0
-  carousel_slider: ^4.2.1
+  # carousel_slider: ^4.2.1
+  carousel_slider: ^5.0.0
   cupertino_icons: ^1.0.6
   firebase_analytics: ^11.1.0
   firebase_core: ^3.1.1

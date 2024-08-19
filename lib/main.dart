@@ -1,8 +1,6 @@
-import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_app/pages/baner_principal.dart';
+
 import 'package:flutter_app/pages/drawer_page.dart';
 import 'package:flutter_app/pages/footer_page.dart';
 import 'package:flutter_app/pages/lading_page.dart';
@@ -12,7 +10,7 @@ import 'package:flutter_app/utils/animation_main.dart';
 import 'package:flutter_app/utils/animation_text.dart';
 import 'package:flutter_app/utils/bar_navegacion.dart';
 import 'package:flutter_app/utils/hover_animation.dart';
-import 'package:flutter_app/utils/screen_utils.dart';
+
 import 'package:flutter_app/utils/time_regre.dart';
 import 'package:flutter_app/utils/utils_list.dart';
 import 'package:flutter_app/utils/widget_button.dart';
@@ -26,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Mi Aplicación Web Responsiva',
+      title: 'Meet & Greet Experience',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -63,11 +61,11 @@ class ResponsiveZoomableWebPage extends StatelessWidget {
 
                   // Contenido principal
                   Expanded(
-                    // child:
-                    // InteractiveViewer(
+                    // child: InteractiveViewer(
+                    //   clipBehavior: Clip.antiAlias,
                     //   boundaryMargin: const EdgeInsets.all(20),
-                    //   minScale: 0.5,
-                    //   maxScale: 4,
+                    //   minScale: 1,
+                    //   maxScale: 8,
                     child: SingleChildScrollView(
                       child: ConstrainedBox(
                         constraints:
@@ -75,11 +73,11 @@ class ResponsiveZoomableWebPage extends StatelessWidget {
                         child: IntrinsicHeight(
                           child: _buildResponsiveContent(
                               constraints.maxWidth, isPortrait, context),
-                          // ),
                         ),
                       ),
                     ),
                   ),
+                  // ),
                 ],
               );
             },
@@ -248,22 +246,30 @@ class ResponsiveZoomableWebPage extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: CarouselSlider(
-                  options: CarouselOptions(
-                    clipBehavior: Clip.antiAlias,
-                    autoPlay: true,
-                    autoPlayInterval: const Duration(seconds: 5),
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 3000),
-                    viewportFraction: 1.0,
+                child: Container(
+                  width: width / 2,
+                  height: height / 1.2,
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(26, 163, 224, 217),
+                    borderRadius:
+                        BorderRadius.only(bottomLeft: Radius.circular(10)),
                   ),
-                  items: imgList
-                      .map((item) => Image.asset(
-                            item,
-                            fit: BoxFit.fill,
-                            filterQuality: FilterQuality.high,
-                          ))
-                      .toList(),
+                  child: CarouselSlider(
+                    options: CarouselOptions(
+                      clipBehavior: Clip.antiAlias,
+                      autoPlay: true,
+                      autoPlayInterval: const Duration(seconds: 5),
+                      autoPlayAnimationDuration: const Duration(seconds: 5),
+                      viewportFraction: 1.0,
+                    ),
+                    items: imgList
+                        .map((item) => Image.asset(
+                              item,
+                              fit: BoxFit.fill,
+                              filterQuality: FilterQuality.high,
+                            ))
+                        .toList(),
+                  ),
                 ),
               ),
             ],
@@ -295,21 +301,27 @@ class ResponsiveZoomableWebPage extends StatelessWidget {
     return Column(
       children: [
         Expanded(
-          child: CarouselSlider(
-            options: CarouselOptions(
-              clipBehavior: Clip.antiAlias,
-              autoPlay: true,
-              autoPlayInterval: const Duration(seconds: 5),
-              autoPlayAnimationDuration: const Duration(milliseconds: 3000),
-              viewportFraction: 1.0,
+          child: Container(
+            decoration: const BoxDecoration(
+              color: Color.fromARGB(26, 163, 224, 217),
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10)),
             ),
-            items: imgList
-                .map((item) => Image.asset(
-                      item,
-                      fit: BoxFit.fill,
-                      filterQuality: FilterQuality.high,
-                    ))
-                .toList(),
+            child: CarouselSlider(
+              options: CarouselOptions(
+                clipBehavior: Clip.antiAlias,
+                autoPlay: true,
+                autoPlayInterval: const Duration(seconds: 5),
+                autoPlayAnimationDuration: const Duration(seconds: 4),
+                viewportFraction: 1.0,
+              ),
+              items: imgList
+                  .map((item) => Image.asset(
+                        item,
+                        fit: BoxFit.fill,
+                        filterQuality: FilterQuality.high,
+                      ))
+                  .toList(),
+            ),
           ),
         ),
         Expanded(
@@ -664,7 +676,7 @@ class ResponsiveZoomableWebPage extends StatelessWidget {
         ),
         Container(
           width: width,
-          height: height / 6.5,
+          height: height / 6,
           child: Footer(),
         ),
       ],
@@ -683,283 +695,265 @@ class ResponsiveZoomableWebPage extends StatelessWidget {
     ];
     return Column(
       children: [
-        Expanded(
-          child: CarouselSlider(
-            options: CarouselOptions(
-              clipBehavior: Clip.antiAlias,
-              autoPlay: true,
-              autoPlayInterval: const Duration(seconds: 5),
-              autoPlayAnimationDuration: const Duration(milliseconds: 3000),
-              viewportFraction: 1.0,
-            ),
-            items: imgList
-                .map((item) => Image.asset(
+        Container(
+          width: width,
+          height: height / 2.5,
+          decoration: const BoxDecoration(
+            color: Color.fromARGB(26, 163, 224, 217),
+            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10)),
+          ),
+          child: Stack(
+            children: [
+              Positioned(
+                left: 5,
+                top: 10,
+                child: SizedBox(
+                  width: 90,
+                  height: 90,
+                  child: Image.asset(
+                    'assets/images/rectangle_16.png',
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 10,
+                top: width / 4,
+                child: SizedBox(
+                  width: width,
+                  height: 200,
+                  child: AnimationMainText(
+                      img: "EXPO REFORMA,CDMX 26 - 27 OCTUBRE 2024",
+                      wiseAnimation: 4,
+                      fontSized: width / 30,
+                      fontWeight: FontWeight.w400,
+                      letterSpacing: 1),
+                ),
+              ),
+              Positioned(
+                top: width / 3.8,
+                left: 10,
+                child: SizedBox(
+                  width: width,
+                  height: 150,
+                  child: AnimationMainText(
+                      img: "MEET & GREET",
+                      wiseAnimation: 400,
+                      fontSized: width / 7,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0),
+                ),
+              ),
+              Positioned(
+                top: width / 2.3,
+                left: 10,
+                child: SizedBox(
+                  width: width,
+                  height: 150,
+                  child: AnimationMainText(
+                      img: "EXPERIENCE",
+                      wiseAnimation: -300,
+                      fontSized: width / 7,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0),
+                ),
+              ),
+              Positioned(
+                top: width / 1.6,
+                left: 10,
+                child: SizedBox(
+                  width: width,
+                  height: 150,
+                  child: AnimationMainText(
+                      img: "2024",
+                      wiseAnimation: 400,
+                      fontSized: width / 7,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0),
+                ),
+              ),
+              Positioned(
+                bottom: 10,
+                right: 10,
+                child: ButtonMain(
+                  heightB: height / 19,
+                  widthB: width / 3,
+                  title: "Boletos",
+                ),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          width: width,
+          height: height / 2.5,
+          decoration: const BoxDecoration(
+            color: Color.fromARGB(26, 163, 224, 217),
+            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10)),
+          ),
+          child: InteractiveViewer(
+            boundaryMargin: const EdgeInsets.all(20),
+            minScale: 1,
+            maxScale: 8,
+            child: CarouselSlider(
+              options: CarouselOptions(
+                autoPlay: true,
+                autoPlayInterval: const Duration(seconds: 5),
+                autoPlayAnimationDuration: const Duration(seconds: 4),
+                viewportFraction: 1.0,
+              ),
+              items: imgList
+                  .map(
+                    (item) => Image.asset(
                       item,
                       fit: BoxFit.fill,
                       filterQuality: FilterQuality.high,
-                    ))
-                .toList(),
+                    ),
+                  )
+                  .toList(),
+            ),
           ),
         ),
-        Expanded(
-          child: Container(
+        Container(
             width: width,
             decoration: const BoxDecoration(
               color: Color.fromARGB(26, 163, 224, 217),
               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10)),
             ),
-            child: Stack(
-              children: [
-                Positioned(
-                  left: 10,
-                  top: -50,
-                  child: SizedBox(
-                    width: 200,
-                    height: 200,
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Image.asset(
-                            'assets/images/rectangle_16.png',
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                        const Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "MEET & GREET",
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            Text(
-                              "EXPERIENCE 2024",
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 10,
-                  top: width / 4,
-                  child: SizedBox(
-                    width: width,
-                    height: 200,
-                    child: AnimationMainText(
-                        img: "EXPO REFORMA,CDMX 26 - 27 OCTUBRE 2024",
-                        wiseAnimation: 4,
-                        fontSized: width / 30,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: 1),
-                  ),
-                ),
-                Positioned(
-                  top: width / 3.8,
-                  left: 10,
-                  child: SizedBox(
-                    width: width,
-                    height: 150,
-                    child: AnimationMainText(
-                        img: "MEET & GREET",
-                        wiseAnimation: 400,
-                        fontSized: width / 7,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0),
-                  ),
-                ),
-                Positioned(
-                  top: width / 2.3,
-                  left: 10,
-                  child: SizedBox(
-                    width: width,
-                    height: 150,
-                    child: AnimationMainText(
-                        img: "EXPERIENCE",
-                        wiseAnimation: -300,
-                        fontSized: width / 7,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0),
-                  ),
-                ),
-                Positioned(
-                  top: width / 1.6,
-                  left: 10,
-                  child: SizedBox(
-                    width: width,
-                    height: 150,
-                    child: AnimationMainText(
-                        img: "2024",
-                        wiseAnimation: 400,
-                        fontSized: width / 7,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0),
-                  ),
-                ),
-                Positioned(
-                  bottom: 10,
-                  right: 10,
-                  child: ButtonMain(
-                    heightB: height / 19,
-                    widthB: width / 3,
-                    title: "Boletos",
-                  ),
-                ),
-              ],
-            ),
+            child: Center(child: CountdownPage())),
+        Container(
+          width: width,
+          height: height / 2,
+          decoration: const BoxDecoration(
+            color: Color.fromARGB(26, 163, 224, 217),
+            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10)),
           ),
-        ),
-        Expanded(
-          child: Container(
-              width: width,
-              decoration: const BoxDecoration(
-                color: Color.fromARGB(26, 163, 224, 217),
-                borderRadius:
-                    BorderRadius.only(bottomLeft: Radius.circular(10)),
+          child: Stack(
+            children: [
+              Positioned(
+                left: 10,
+                top: -150,
+                child: SizedBox(
+                  width: width / 4.5,
+                  height: height,
+                  child: const AnimationMain(
+                    img: "assets/images/rectangle_15.png",
+                    wiseAnimation: 600,
+                  ),
+                ),
               ),
-              child: CountdownPage()),
-        ),
-        Expanded(
-          child: Container(
-            width: width,
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(26, 163, 224, 217),
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10)),
-            ),
-            child: Stack(
-              children: [
-                Positioned(
-                  left: 10,
-                  top: -150,
-                  child: SizedBox(
-                    width: width / 4.5,
-                    height: height,
-                    child: const AnimationMain(
-                      img: "assets/images/rectangle_15.png",
-                      wiseAnimation: 600,
-                    ),
+              Positioned(
+                left: width / 3.8,
+                top: -100,
+                child: SizedBox(
+                  width: width / 4.5,
+                  height: height,
+                  child: const AnimationMain(
+                    img: "assets/images/rectangle_7.png",
+                    wiseAnimation: -600,
                   ),
                 ),
-                Positioned(
-                  left: width / 3.8,
-                  top: -100,
-                  child: SizedBox(
-                    width: width / 4.5,
-                    height: height,
-                    child: const AnimationMain(
-                      img: "assets/images/rectangle_7.png",
-                      wiseAnimation: -600,
-                    ),
+              ),
+              Positioned(
+                right: width / 3.7,
+                top: -150,
+                child: SizedBox(
+                  width: width / 4.5,
+                  height: height,
+                  child: const AnimationMain(
+                    img: "assets/images/rectangle_9.png",
+                    wiseAnimation: 600,
                   ),
                 ),
-                Positioned(
-                  right: width / 3.7,
-                  top: -150,
-                  child: SizedBox(
-                    width: width / 4.5,
-                    height: height,
-                    child: const AnimationMain(
-                      img: "assets/images/rectangle_9.png",
-                      wiseAnimation: 600,
-                    ),
+              ),
+              Positioned(
+                right: 10,
+                top: -90,
+                child: SizedBox(
+                  width: width / 4.5,
+                  height: height,
+                  child: const AnimationMain(
+                    img: "assets/images/rectangle_11.png",
+                    wiseAnimation: -600,
                   ),
                 ),
-                Positioned(
-                  right: 10,
-                  top: -90,
-                  child: SizedBox(
-                    width: width / 4.5,
-                    height: height,
-                    child: const AnimationMain(
-                      img: "assets/images/rectangle_11.png",
-                      wiseAnimation: -600,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.center,
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(26, 163, 224, 217),
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10)),
-            ),
-            width: width,
-            child: Image.asset(
-              'assets/images/maps.png',
-              fit: BoxFit.fitHeight,
-            ),
+        Container(
+          width: width,
+          height: height / 2.5,
+          alignment: Alignment.center,
+          decoration: const BoxDecoration(
+            color: Color.fromARGB(26, 163, 224, 217),
+            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10)),
           ),
-        ),
-        Expanded(
-          child: Container(
-            width: width,
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(26, 163, 224, 217),
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10)),
-            ),
-            child: Stack(
-              children: [
-                Positioned(
-                  left: 10,
-                  top: -150,
-                  child: SizedBox(
-                    width: width / 4.5,
-                    height: height,
-                    child: const AnimationMain(
-                      img: "assets/images/rectangle.png",
-                      wiseAnimation: 600,
-                    ),
-                  ),
+          child: Column(
+            children: [
+              Container(
+                width: width,
+                height: height / 2,
+                child: Image.asset(
+                  'assets/images/maps.png',
+                  fit: BoxFit.fitHeight,
                 ),
-                Positioned(
-                  left: width / 3.8,
-                  top: -100,
-                  child: SizedBox(
-                    width: width / 4.5,
-                    height: height,
-                    child: const AnimationMain(
-                      img: "assets/images/rectangle_13.png",
-                      wiseAnimation: -600,
+              ),
+              Expanded(
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: 10,
+                      top: -150,
+                      child: SizedBox(
+                        width: width / 4.5,
+                        height: height,
+                        child: const AnimationMain(
+                          img: "assets/images/rectangle.png",
+                          wiseAnimation: 600,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                Positioned(
-                  right: width / 3.7,
-                  top: -150,
-                  child: SizedBox(
-                    width: width / 4.5,
-                    height: height,
-                    child: const AnimationMain(
-                      img: "assets/images/rectangle_10.png",
-                      wiseAnimation: 600,
+                    Positioned(
+                      left: width / 3.8,
+                      top: -100,
+                      child: SizedBox(
+                        width: width / 4.5,
+                        height: height,
+                        child: const AnimationMain(
+                          img: "assets/images/rectangle_13.png",
+                          wiseAnimation: -600,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                Positioned(
-                  right: 10,
-                  top: -100,
-                  child: SizedBox(
-                    width: width / 4.5,
-                    height: height,
-                    child: const AnimationMain(
-                      img: "assets/images/rectangl.png",
-                      wiseAnimation: -600,
+                    Positioned(
+                      right: width / 3.7,
+                      top: -150,
+                      child: SizedBox(
+                        width: width / 4.5,
+                        height: height,
+                        child: const AnimationMain(
+                          img: "assets/images/rectangle_10.png",
+                          wiseAnimation: 600,
+                        ),
+                      ),
                     ),
-                  ),
+                    Positioned(
+                      right: 10,
+                      top: -100,
+                      child: SizedBox(
+                        width: width / 4.5,
+                        height: height,
+                        child: const AnimationMain(
+                          img: "assets/images/rectangl.png",
+                          wiseAnimation: -600,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
         Expanded(

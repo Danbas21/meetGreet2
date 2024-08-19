@@ -18,7 +18,7 @@ class ButtonMain extends StatelessWidget {
   Widget build(BuildContext context) {
     double av = ResponsiveUtil.getMultiplier(context);
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+
     return SizedBox(
       width: widthB,
       height: heightB,

@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/utils/screen_utils.dart';
-import 'package:intl/intl.dart';
 
 class CountdownPage extends StatefulWidget {
   @override
@@ -27,7 +26,7 @@ class _CountdownPageState extends State<CountdownPage> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+
     double av = ResponsiveUtil.getMultiplier(context);
 
     final now = DateTime.now();
@@ -38,21 +37,19 @@ class _CountdownPageState extends State<CountdownPage> {
     final minutes = difference.inMinutes % 60;
     final seconds = difference.inSeconds % 60;
 
-    return Center(
-      child: Text(
-        'Faltan: $days días, $hours horas, $minutes minutos, $seconds segundos',
-        style: TextStyle(
-            fontSize: width / (av == 1.0 ? 30 : 25),
-            color: const Color.fromARGB(
-              255,
-              0,
-              0,
-              0,
-            ),
-            fontFamily: 'Montserrat',
-            fontStyle: FontStyle.normal,
-            fontWeight: FontWeight.w900),
-      ),
+    return Text(
+      'Faltan: $days días, $hours horas, $minutes minutos, $seconds segundos',
+      style: TextStyle(
+          fontSize: width / (av == 1.0 ? 30 : 25),
+          color: const Color.fromARGB(
+            255,
+            0,
+            0,
+            0,
+          ),
+          fontFamily: 'Roboto',
+          fontStyle: FontStyle.normal,
+          fontWeight: FontWeight.w900),
     );
   }
 }

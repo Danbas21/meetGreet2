@@ -136,6 +136,7 @@ class LadingPage3 extends StatelessWidget {
                                       style: TextStyle(
                                         color: Colors.black,
                                         fontSize: width / 50,
+                                        fontFamily: 'Roboto',
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
@@ -158,6 +159,7 @@ class LadingPage3 extends StatelessWidget {
                                       style: TextStyle(
                                         color: Colors.black,
                                         fontSize: width / 50,
+                                        fontFamily: 'Roboto',
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),

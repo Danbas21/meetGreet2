@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/main.dart';
-import 'package:flutter_app/pages/baner_principal.dart';
-import 'package:flutter_app/pages/footer_page.dart';
+
 import 'package:flutter_app/pages/invite_page.dart';
-import 'package:flutter_app/pages/lading_page.dart';
-import 'package:flutter_app/pages/lading_page_2.dart';
-import 'package:flutter_app/pages/lading_page_3.dart';
+
 import 'package:flutter_app/pages/schedule_page.dart';
 import 'package:flutter_app/pages/whatis_page.dart';
-import 'package:flutter_app/utils/bar_navegacion.dart';
+
 import 'package:flutter_app/utils/screen_utils.dart';
 
 class AppDrawer extends StatefulWidget {
@@ -63,21 +60,24 @@ class _AppDrawerState extends State<AppDrawer>
             child: Drawer(
               child: ListView(
                 children: <Widget>[
-                  DrawerHeader(
-                    decoration: const BoxDecoration(
-                      color: Colors.blue,
-                    ),
-                    child: Text(
-                      'Menú',
-                      style: TextStyle(
-                        color: const Color.fromARGB(255, 24, 25, 27),
-                        fontSize: width /
-                            (av == 1.0
-                                ? 90
-                                : av == .65
-                                    ? 40
-                                    : 35),
-                        fontWeight: FontWeight.bold,
+                  SizedBox(
+                    height: height / 10,
+                    child: DrawerHeader(
+                      decoration: const BoxDecoration(
+                        color: Colors.blue,
+                      ),
+                      child: Text(
+                        'Menú',
+                        style: TextStyle(
+                          color: const Color.fromARGB(255, 24, 25, 27),
+                          fontSize: width /
+                              (av == 1.0
+                                  ? 90
+                                  : av == .65
+                                      ? 40
+                                      : 35),
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

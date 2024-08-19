@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/drawer_page.dart';
 import 'package:flutter_app/pages/footer_page.dart';
 import 'package:flutter_app/utils/bar_navegacion.dart';
-import 'package:flutter_app/utils/list_image.dart';
 import 'package:flutter_app/utils/screen_utils.dart';
 import 'package:flutter_app/utils/widget_circulo.dart';
 import 'package:flutter_app/utils/widget_grid_cir.dart';
@@ -140,7 +139,7 @@ class WhatIsPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: height / 20,
+              top: height / -25,
               right: width / 11,
               child: Container(
                 width: width / 1.2,
@@ -160,7 +159,7 @@ class WhatIsPage extends StatelessWidget {
               bottom: 0,
               child: SizedBox(
                 width: width,
-                height: height / 7,
+                height: height / 6,
                 child: Footer(),
               ),
             ),

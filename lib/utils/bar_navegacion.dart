@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_app/main.dart';
-import 'package:flutter_app/pages/baner_principal.dart';
-import 'package:flutter_app/pages/footer_page.dart';
-import 'package:flutter_app/pages/invite_page.dart';
-import 'package:flutter_app/pages/lading_page.dart';
-import 'package:flutter_app/pages/lading_page_2.dart';
-import 'package:flutter_app/pages/lading_page_3.dart';
 
+import 'package:flutter_app/main.dart';
+
+import 'package:flutter_app/pages/invite_page.dart';
 import 'package:flutter_app/pages/schedule_page.dart';
 import 'package:flutter_app/pages/whatis_page.dart';
 import 'package:flutter_app/utils/screen_utils.dart';
@@ -16,7 +11,7 @@ class BarNavi extends StatelessWidget implements PreferredSizeWidget {
   const BarNavi({Key? key}) : super(key: key);
 
   @override
-  Size get preferredSize => const Size.fromHeight(110.0);
+  Size get preferredSize => const Size.fromHeight(50.0);
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +33,7 @@ class BarNavi extends StatelessWidget implements PreferredSizeWidget {
                   child: IconButton(
                     icon: const Icon(
                       Icons.menu_sharp,
-                      size: 60,
+                      size: 30,
                     ),
                     onPressed: () {
                       Scaffold.of(context).openDrawer();
@@ -54,7 +49,8 @@ class BarNavi extends StatelessWidget implements PreferredSizeWidget {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => ResponsiveZoomableWebPage()),
+                        builder: (context) =>
+                            const ResponsiveZoomableWebPage()),
                   );
                 },
                 child: Text(

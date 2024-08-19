@@ -22,7 +22,7 @@ class Footer extends StatelessWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
             'assets/images/rectangle_18.png',
@@ -52,7 +52,7 @@ class Footer extends StatelessWidget {
                           ? 60
                           : av == .65
                               ? 40
-                              : 50)),
+                              : 52)),
             ),
           ),
           const SocialIconButton(
@@ -82,7 +82,7 @@ class Footer extends StatelessWidget {
                         : av == .65
                             ? 70
                             : 35),
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w500,
                 fontFamily: 'Roboto',
               ),
             ),

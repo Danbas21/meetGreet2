@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/utils/screen_utils.dart';
 
 class AnimationMain extends StatefulWidget {
   final String img;

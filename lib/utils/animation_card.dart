@@ -102,11 +102,11 @@ class _RotatableImageCardState extends State<RotatableImageCard>
             },
           ),
           Positioned(
-            bottom: 10,
-            right: 10,
+            bottom: 0,
+            right: 0,
             child: IconButton(
               icon: const Icon(Icons.add_circle,
-                  color: Color.fromARGB(255, 76, 84, 199), size: 30),
+                  color: Color.fromARGB(255, 76, 84, 199), size: 20),
               onPressed: () => _showPopup(context),
             ),
           ),
